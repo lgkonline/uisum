@@ -1,0 +1,21 @@
+@import "./style/_variables.scss";
+@import "./style/_functions.scss";
+@import "./style/_mixins.scss";
+@import "./style/_keyframes.scss";
+
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./style/_bootstrap.scss";
+// @import "node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "./style/_ui-variables";
+@import "./style/_general";
+@import "./style/_router";
+@import "./style/_status";
+@import "./style/_grid";
+@import "./style/_search";
+@import "./style/_actions";
+@import "./style/_fluent-btn";
+
+@import "./style/document-view";
+@import "./style/_bootstrap-optimizations.scss";

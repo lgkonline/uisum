@@ -1,0 +1,33 @@
+
+// $theme: #f2f2f2;
+$theme: #1E2226;
+$primary: rgb(255, 38, 0);
+
+$fonts-direction: "../../dist/webfont/";
+
+@import "../../dist/style.scss";
+
+@import "~highlight.js/styles/github.css";
+
+.home-jumbotron {
+    background-image: linear-gradient(white, #f2f2f2);
+
+    .display-2 {
+        font-weight: 600;
+    }
+}
+
+.logo-img {
+    width: 128px;
+}
+
+.lgk-logo {
+    a {
+        color: $gray-200;
+
+        &:hover {
+            color: orange;
+            text-decoration: none;
+        }
+    }
+}

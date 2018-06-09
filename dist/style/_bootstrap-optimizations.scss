@@ -1,0 +1,51 @@
+.container,
+.container-fluid {
+    &:before {
+        content: "";
+        display: table;
+    }
+}
+
+.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+@include media-breakpoint-up(sm) {
+    .form-horizontal .col-form-label {
+        text-align: right;
+    }
+}
+
+.form-control:not(.default) {
+    border-top-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+
+    &:not(:disabled):not([readonly]) {
+        background-color: transparent;
+    }
+
+    &:focus {
+        box-shadow: 0 1px 0 0 $input-focus-border-color;
+    }
+}
+
+.btn {
+    background-image: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,0));
+}

@@ -1,0 +1,18 @@
+$normal-size: 48px;
+$actions-height: 120px;
+
+/* Bootstrap */
+$primary:       #007bff !default;
+/* Bootstrap ENDE */
+
+$theme: $primary !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "theme": $theme
+), $theme-colors);
+
+// Links
+//
+
+$link-hover-color: lighten($primary, 5%);

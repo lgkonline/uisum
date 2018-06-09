@@ -1,0 +1,41 @@
+.ui-search {
+    height: $normal-size;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &.ui-search-body {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        .ui-search-input-group {
+            display: flex;
+        }
+
+        &.focus {
+            box-shadow: $input-btn-focus-box-shadow;
+        }
+    }
+
+    &.focus {
+        box-shadow: inset $input-btn-focus-box-shadow;
+    }
+}
+
+.ui-search-input-group {
+    display: none;
+
+    .input-group-text {
+        border-color: transparent;
+        background-color: transparent;
+    }
+}
+
+.ui-search-control {
+    border: none !important;
+    background-color: transparent !important;
+
+    &:focus {
+        box-shadow: none;
+    }
+}

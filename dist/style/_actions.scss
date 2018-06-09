@@ -1,0 +1,46 @@
+.ui-actions-menu {
+    .nav-link {
+        position: relative;
+        margin-left: 2px;
+
+        background-color: var(--action-link-bg-color);
+
+        &:hover {
+            background-color: $bla-button-bg-hover;
+        }
+    }
+}
+
+.ui-actions {
+    display: inline;
+    transition: background-color 0.5s linear;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0;
+
+    &.open {
+        left: -48px;
+        width: calc(100% + 48px);
+    }
+    
+    .navbar-nav > li > a {
+        animation: fadeInDown 0.5s;
+        transition: background-color .2s;
+    }
+}
+
+.ui-actions {
+    &.sm {
+        @include actions(768px);
+    }
+
+    &.md {
+        @include actions(992px);
+    }
+
+    &.lg {
+        @include actions(1200px);
+    }
+}
