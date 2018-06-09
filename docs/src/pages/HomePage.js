@@ -34,6 +34,10 @@ class HomePage extends React.Component {
                             {t("ORANGE_UI_DESCRIPTION")}
                         </p>
 
+                        <p className="lead">
+                            <code>npm i -S uisum</code>
+                        </p>
+
                         <FluentBtn href="https://lgk.io/site/#/dev" className="btn btn-outline-primary btn-lg mt-4">
                             {t("LGK_DEV_OVERVIEW")}
                         </FluentBtn>

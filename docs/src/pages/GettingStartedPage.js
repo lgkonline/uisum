@@ -21,7 +21,7 @@ class GettingStartedPage extends React.Component {
                 title: t("STARTER_PROJECT"),
                 body: (
                     <div className="text-center">
-                        <FluentBtn className="btn btn-outline-primary" href="https://github.com/lgkonline/lgk-ui-starter">
+                        <FluentBtn className="btn btn-outline-primary" href="https://github.com/lgkonline/uisum-starter">
                             <span className="icon-github" /><br />
                             {t("STARTER_PROJECT_TEXT")}
                         </FluentBtn>
