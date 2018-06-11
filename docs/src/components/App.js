@@ -1,10 +1,7 @@
 import React from "react";
-import createHashHistory from "history/createHashHistory";
-import PropTypes from "prop-types";
-import { render } from "react-dom";
 import { LgkPillComponent } from "lgk";
 
-import { Grid, SidebarMenu, MenuItem, ActionMenu, ActionMenuItem, Search } from "../../../index.js";
+import { Grid, SidebarMenu, MenuItem, Search } from "../../../index.js";
 
 import HomePage from "../pages/HomePage";
 import GettingStartedPage from "../pages/GettingStartedPage";
