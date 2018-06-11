@@ -1,6 +1,6 @@
 {
   "name": "uisum",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "UI library for/with React",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,8 @@
     "put-version": "put-version ./docs/index.html",
     "build-all": "npm run doc && npm run doc-doc && npm run build && npm run doc-build && npm run put-version",
     "publish": "npm run build-all",
-    "prepack": "node ./prepack.js",
-    "postpack": "node ./postpack.js",
+    "prepublishOnly": "node ./prepublish.js",
+    "postpublish": "node ./postpublish.js",
     "serve": "http-server ./docs -o",
     "start": "npm run serve | npm run watch"
   },
