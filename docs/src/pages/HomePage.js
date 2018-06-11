@@ -1,8 +1,6 @@
 import React from "react";
 import { Page, Body, Header, HeaderTitle, ActionMenu, ActionMenuItem, Search, FluentBtn, Utilities } from "../../../index.js";
 
-const version = require("../../../package.json").version;
-
 class HomePage extends React.Component {
     componentDidMount() {
         Utilities.registerFluentBtns();
@@ -30,7 +28,6 @@ class HomePage extends React.Component {
 
                     <div className="container text-center">
                         <p className="lead">
-                            {window.appTitle} is the base for <a href="https://lgk.io/ui">LGK UI</a> and is Open Source.<br />
                             {t("ORANGE_UI_DESCRIPTION")}
                         </p>
 

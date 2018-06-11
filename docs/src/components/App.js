@@ -13,6 +13,7 @@ import SearchResultsPage from "../pages/SearchResultsPage";
 import IntroDemoPage from "../pages/IntroDemoPage";
 
 window.appTitle = "Uisum";
+window.version = require("../../../package.json").version;
 window.logo = require("../images/uisum logo.svg");
 window.t = Translation.getPhrase;
 
