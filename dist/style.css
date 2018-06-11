@@ -6495,9 +6495,6 @@ body {
   body.open .ui-wrapper {
     display: block; }
 
-h1, h2 {
-  font-weight: 300; }
-
 a {
   text-decoration-skip: ink; }
 
