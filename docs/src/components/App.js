@@ -2,6 +2,7 @@ import React from "react";
 import { LgkPillComponent } from "lgk";
 
 import { Grid, SidebarMenu, MenuItem, Search } from "../../../index.js";
+import Translation from "../Translation";
 
 import HomePage from "../pages/HomePage";
 import GettingStartedPage from "../pages/GettingStartedPage";
@@ -10,6 +11,10 @@ import ReactComponentPage from "../pages/ReactComponentPage";
 import BootstrapDemoPage from "../pages/BootstrapDemoPage";
 import SearchResultsPage from "../pages/SearchResultsPage";
 import IntroDemoPage from "../pages/IntroDemoPage";
+
+window.appTitle = "Uisum";
+window.logo = require("../images/uisum logo.svg");
+window.t = Translation.getPhrase;
 
 class App extends React.Component {
     constructor() {
