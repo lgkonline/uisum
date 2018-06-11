@@ -21,7 +21,7 @@ class GettingStartedPage extends React.Component {
                 title: t("STARTER_PROJECT"),
                 body: (
                     <div className="text-center">
-                        <FluentBtn className="btn btn-outline-primary" href="https://github.com/lgkonline/uisum-starter">
+                        <FluentBtn className="btn btn-outline-primary" href={`https://github.com/lgkonline/${packageName}-starter`}>
                             <span className="icon-github" /><br />
                             {t("STARTER_PROJECT_TEXT")}
                         </FluentBtn>
@@ -82,7 +82,7 @@ class GettingStartedPage extends React.Component {
 import { render } from "react-dom";
 
 // Imports components for Grid and Menu items
-import { Grid, SidebarMenu, MenuItem } from "uisum";
+import { Grid, SidebarMenu, MenuItem } from "${packageName}";
 
 // Import of a page
 import HomePage from "./HomePage.js";
@@ -116,7 +116,7 @@ render(<App />, document.getElementById("app"));`
                         <h2>Page (HomePage.js)</h2>
                         <Highlight className="js">{
                             `import React from "react";
-import { Page, Body, Header, HeaderTitle, HeaderActions, ActionMenu, ActionMenuItem } from "uisum";
+import { Page, Body, Header, HeaderTitle, HeaderActions, ActionMenu, ActionMenuItem } from "${packageName}";
 
 class BootstrapDemoPage extends React.Component {
     render() {
@@ -145,7 +145,7 @@ So you can also use classes like .text-theme and .bg-theme.
 /* Here you can set more Bootstrap variables to customize it. Use http://go.lgk.io/bootstrap to see all of them. */
 
 /* Stylesheet for Orange UI. Bootstrap 4 is already included. */
-@import "~uisum/dist/style.scss";
+@import "~${packageName}/dist/style.scss";
 `
                         }</Highlight>
                     </div>

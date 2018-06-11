@@ -32,7 +32,7 @@ class HomePage extends React.Component {
                         </p>
 
                         <p className="lead">
-                            <code>npm i -S uisum</code>
+                            <code>npm i -S {packageName}</code>
                         </p>
 
                         <FluentBtn href="https://lgk.io/site/#/dev" className="btn btn-outline-primary btn-lg mt-4">

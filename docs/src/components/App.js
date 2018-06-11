@@ -12,6 +12,7 @@ import BootstrapDemoPage from "../pages/BootstrapDemoPage";
 import SearchResultsPage from "../pages/SearchResultsPage";
 import IntroDemoPage from "../pages/IntroDemoPage";
 
+window.packageName = "uisum";
 window.appTitle = "Uisum";
 window.version = require("../../../package.json").version;
 window.logo = require("../images/uisum logo.svg");

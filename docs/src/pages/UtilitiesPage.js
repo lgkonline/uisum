@@ -24,7 +24,7 @@ class UtilitiesPage extends React.Component {
                         <p>A static class with some useful methods.</p>
 
                         <h2 className="page-header">Beispiel</h2>
-                        <Highlight className="js">{`import { Utilities } from "uisum";
+                        <Highlight className="js">{`import { Utilities } from "${packageName}";
                             
 Utilities.startLoading();`}</Highlight>
 
