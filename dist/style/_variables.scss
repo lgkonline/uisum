@@ -1,10 +1,15 @@
+// Size for sidebar and child elements.
 $normal-size: 48px !default;
+
+// Height of actions when enabled in compact view.
 $actions-height: 120px !default;
 
-/* Bootstrap */
-$primary:       #007bff !default;
-/* Bootstrap ENDE */
+// Height of header and child elements.
+$header-height: $normal-size !default;
 
+$primary:       #007bff !default;
+
+// Main color for sidebar, header and other Uisum elements.
 $theme: $primary !default;
 
 $theme-colors: () !default;
@@ -12,7 +17,5 @@ $theme-colors: map-merge((
   "theme": $theme
 ), $theme-colors);
 
-// Links
-//
-
-$link-hover-color: lighten($primary, 5%);
+/* Links */
+$link-hover-color: lighten($primary, 5%) !default;

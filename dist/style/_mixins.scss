@@ -125,7 +125,7 @@
         background: var(--sidebar-bg-color);
         position: fixed;
         left: 0;
-        top: $normal-size;
+        top: $actions-height;
         bottom: 0;
         z-index: 3;
         @include slide-transition();
@@ -141,6 +141,7 @@
             background-color: var(--action-link-bg-color);
             width: 100%;
             position: absolute;
+            z-index: 1;
             left: 0;
             top: 0;
             box-shadow: .6rem 6rem 6rem rgba(0,0,0,.3);
@@ -162,7 +163,7 @@
             
             .ui-actions-menu {
                 .nav-link:not(.ui-actions-menu-toggle) {
-                    display: block;
+                    display: flex;
                 }
             }
 

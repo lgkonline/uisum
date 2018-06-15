@@ -17,6 +17,11 @@ const translations = {
     "DOCUMENTATION": ["Documentation", "Dokumentation"],
     "GETTING_STARTED": ["Getting started", "Los geht's"],
     "STARTER_PROJECT": ["Starter project", "Starter-Projekt"],
+    "SCSS_VARIABLES": ["SCSS variables", "SCSS Variablen"],
+    "SCSS_VARIABLES_DESC": [
+        "These are special variables for Uisum. There are many others that come with Bootstrap.",
+        "Dies sind Extra-Variablen für Uisum. Es gibt noch viele weitere Variablen, die mit Bootstrap kommen."
+    ],
     "STARTER_PROJECT_TEXT": [
         "For a quick start clone this GitHub repo",
         "Für einen schnellen Einstieg, klone diese GitHub Repo"

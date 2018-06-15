@@ -1,5 +1,4 @@
-/* Bootstrap */
-/* Bootstrap ENDE */
+/* Links */
 @keyframes fade-in {
   from {
     opacity: 0; }
@@ -6729,7 +6728,7 @@ body {
 .ui-sidebar-toggler {
   position: fixed;
   width: 48px;
-  height: 48px;
+  height: 120px;
   left: 0;
   top: 0;
   z-index: 3; }
@@ -6744,7 +6743,7 @@ body {
   overflow: hidden; }
 
 .ui-header {
-  height: 48px;
+  height: 120px;
   color: #fff;
   position: fixed;
   top: 0;
@@ -6753,7 +6752,10 @@ body {
   z-index: 3; }
   @media screen and (min-width: 768px) {
     .ui-header {
-      right: 1rem; } }
+      right: 1rem; }
+    @-moz-document url-prefix() {
+      .ui-header {
+        right: calc(1rem + 1px); } } }
   .ui-header .navbar-nav {
     margin: 0; }
     .ui-header .navbar-nav > li {
@@ -6831,7 +6833,7 @@ body {
   background: var(--sidebar-bg-color);
   position: fixed;
   left: 0;
-  top: 48px;
+  top: 120px;
   bottom: 0;
   z-index: 3;
   transition: width 0.5s; }
@@ -6872,7 +6874,7 @@ body {
     background: var(--sidebar-bg-color);
     position: fixed;
     left: 0;
-    top: 48px;
+    top: 120px;
     bottom: 0;
     z-index: 3;
     transition: width 0.5s; }
@@ -6923,7 +6925,8 @@ body {
   margin-top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.1) !important;
-  border-color: transparent !important; }
+  border-color: transparent !important;
+  height: 100%; }
   .ui-open-menu:hover, .ui-open-menu:focus {
     background-color: rgba(255, 255, 255, 0.07);
     border-color: transparent; }
@@ -6939,17 +6942,20 @@ body {
   padding-bottom: 10px;
   background-color: #fff;
   min-height: calc(100vh - 48px);
-  margin-top: 48px; }
+  margin-top: 120px; }
 
 .ui-header-logo {
-  padding: 10px 15px;
+  padding: 0 1rem;
   margin: 0;
   cursor: default;
-  display: inline-block;
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 24px;
   position: absolute;
-  z-index: 1; }
+  z-index: 1;
+  top: 0;
+  bottom: 0; }
   .ui-header-logo a {
     color: inherit; }
     .ui-header-logo a:focus {
@@ -7013,12 +7019,21 @@ body {
   .ui-search-control:focus {
     box-shadow: none; }
 
-.ui-actions-menu .nav-link {
-  position: relative;
-  margin-left: 2px;
-  background-color: var(--action-link-bg-color); }
-  .ui-actions-menu .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.07); }
+.ui-actions-menu {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+  .ui-actions-menu .nav-item {
+    height: 120px; }
+  .ui-actions-menu .nav-link {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    position: relative;
+    margin-left: 2px;
+    background-color: var(--action-link-bg-color); }
+    .ui-actions-menu .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.07); }
 
 .ui-actions {
   display: inline;
@@ -7042,6 +7057,7 @@ body {
     background-color: var(--action-link-bg-color);
     width: 100%;
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 0;
     box-shadow: 0.6rem 6rem 6rem rgba(0, 0, 0, 0.3);
@@ -7057,7 +7073,7 @@ body {
         display: flex;
         align-items: center; }
     .ui-actions.sm.open .ui-actions-menu .nav-link:not(.ui-actions-menu-toggle) {
-      display: block; }
+      display: flex; }
     .ui-actions.sm.open .ui-header-form {
       width: 100%;
       margin-bottom: .4rem; }
@@ -7077,6 +7093,7 @@ body {
     background-color: var(--action-link-bg-color);
     width: 100%;
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 0;
     box-shadow: 0.6rem 6rem 6rem rgba(0, 0, 0, 0.3);
@@ -7092,7 +7109,7 @@ body {
         display: flex;
         align-items: center; }
     .ui-actions.md.open .ui-actions-menu .nav-link:not(.ui-actions-menu-toggle) {
-      display: block; }
+      display: flex; }
     .ui-actions.md.open .ui-header-form {
       width: 100%;
       margin-bottom: .4rem; }
@@ -7112,6 +7129,7 @@ body {
     background-color: var(--action-link-bg-color);
     width: 100%;
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 0;
     box-shadow: 0.6rem 6rem 6rem rgba(0, 0, 0, 0.3);
@@ -7127,7 +7145,7 @@ body {
         display: flex;
         align-items: center; }
     .ui-actions.lg.open .ui-actions-menu .nav-link:not(.ui-actions-menu-toggle) {
-      display: block; }
+      display: flex; }
     .ui-actions.lg.open .ui-header-form {
       width: 100%;
       margin-bottom: .4rem; }
