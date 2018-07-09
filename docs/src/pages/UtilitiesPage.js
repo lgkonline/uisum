@@ -177,6 +177,13 @@ Utilities.startLoading();`}</Highlight>
                                             Sets <code>margin-left</code> to the width of the sidebar. Could be used for <code>Grid</code>'s footer.
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td><code>.page-header</code></td>
+                                        <td>
+                                            Because Bootstrap dropped <code>.page-header</code> in v4, we integrated it in Uisum.
+                                            Read more about in <a href="https://getbootstrap.com/docs/3.3/components/#page-header">the v3 docs</a>.
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </article>
