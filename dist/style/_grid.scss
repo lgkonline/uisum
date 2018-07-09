@@ -13,7 +13,8 @@
             display: none;
         }
 
-        .ui-page {
+        .ui-page,
+        .ml-sidebar-width {
             margin-left: 0;
         }
 
@@ -24,9 +25,7 @@
     }
 
     &.open {
-        // @media screen and (max-width: 1400px) {
-            --sidebar-bg-color: #{stronger-contrast($theme, 30%)};
-        // }
+        --sidebar-bg-color: #{stronger-contrast($theme, 30%)};
 
         @include openSidebarMenu();
     }
@@ -50,7 +49,7 @@
 .ui-sidebar-toggler {
     position: fixed;
     width: $normal-size;
-    height: $actions-height;
+    height: $header-height;
     left: 0;
     top: 0;
     z-index: 3;
@@ -69,7 +68,7 @@
 }
 
 .ui-header {
-    height: $actions-height;
+    height: $header-height;
     color: $themed-text-color;
     position: fixed;
     top: 0;
@@ -77,15 +76,15 @@
     right: 0;
     z-index: 3;
 
-    @media screen and (min-width: 768px) {
-        right: 1rem;
+    // @media screen and (min-width: 768px) {
+    //     right: 1rem;
 
-        @-moz-document url-prefix() {
-            & {
-                right: calc(1rem + 1px);
-            }
-        }
-    }
+    //     @-moz-document url-prefix() {
+    //         & {
+    //             right: calc(1rem + 1px);
+    //         }
+    //     }
+    // }
     
     .navbar-nav {
         margin: 0;
@@ -137,9 +136,13 @@
     }
 }
 
+.ui-page,
+.ml-sidebar-width {
+    margin-left: $normal-size;
+}
+
 .ui-page {
     @include custom-scrollbar(#333, white);
-    margin-left: $normal-size;
     animation: enabledBlueAppPage .5s;
 }
 
@@ -151,7 +154,8 @@
         left: -$normal-size;
     }
     
-    .ui-page {
+    .ui-page,
+    .ml-sidebar-width {
         margin-left: 0;
     }
 }
@@ -166,7 +170,8 @@
                 background: transparent;
             }
     
-            .ui-page {
+            .ui-page,
+            .ml-sidebar-width {
                 margin-left: 265px;
             }
     
@@ -209,7 +214,7 @@
    padding-bottom: 10px;
    background-color: $body-bg;
    min-height: calc(100vh - #{$normal-size});
-   margin-top: $actions-height;
+   margin-top: $header-height;
 }
 
 .ui-header-logo {

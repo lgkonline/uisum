@@ -142,34 +142,40 @@ Utilities.startLoading();`}</Highlight>
                                     <tr>
                                         <td><code>.ui-sidebar-hidden-on-open</code></td>
                                         <td>
-                                            Das Element wird versteckt solange die Sidebar geöffnet ist.
-                                    </td>
+                                            The element will be hidden when the sidebar is open.
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><code>.ui-sidebar-visible-on-open</code></td>
                                         <td>
-                                            Das Element ist sichtbar solange die Sidebar geöffnet ist.
-                                    </td>
+                                            The element will only be visible when the sidebar is open.
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><code>.ui-header-form</code></td>
                                         <td>
-                                            Nutzbar innerhalb von <code>{`<HeaderActions />`}</code> um in der Action-Leiste
-                                        ein Formular einzubinden. Kombinierbar mit <code>.form-horizontal</code>.
-                                    </td>
+                                            Can be used inside of <code>{`<HeaderActions />`}</code> to embed a form into the action bar.
+                                            Combinable with <code>.form-horizontal</code>.
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><code>.form-horizontal</code></td>
                                         <td>
-                                            Zusammen mit <a href="https://getbootstrap.com/docs/4.0/components/forms/#horizontal-form">Bootstraps Lösung</a>
-                                            &nbsp;zu nutzen. Durch <code>.form-horizontal</code> werden die Labels auf größeren Bildschirmen rechts angeordnet.
-                                    </td>
+                                            Should be used together with <a href="https://getbootstrap.com/docs/4.0/components/forms/#horizontal-form">Bootstrap's solution</a>.
+                                            With <code>.form-horizontal</code> the labels will be right aligned on bigger screens.
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td><code>.form-control.default</code></td>
                                         <td>
-                                            Stellt das Standard-Styling von Bootstrap wieder her.
-                                    </td>
+                                            Resets styling to Bootstrap's default.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>.ml-sidebar-width</code></td>
+                                        <td>
+                                            Sets <code>margin-left</code> to the width of the sidebar. Could be used for <code>Grid</code>'s footer.
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>

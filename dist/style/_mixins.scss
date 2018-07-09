@@ -125,7 +125,7 @@
         background: var(--sidebar-bg-color);
         position: fixed;
         left: 0;
-        top: $actions-height;
+        top: $header-height;
         bottom: 0;
         z-index: 3;
         @include slide-transition();

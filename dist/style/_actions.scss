@@ -4,13 +4,13 @@
     align-items: center;
 
     .nav-item {
-        height: $actions-height;
+        height: $header-height;
     }
 
     .nav-link {
         display: flex;
         align-items: center;
-        height: $actions-height;
+        height: $header-height;
         position: relative;
         margin-left: 2px;
 

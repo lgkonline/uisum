@@ -224,6 +224,8 @@ class Grid extends React.Component {
                             className={"router-page " + (this.state.match[0] == page.name ? "active" : "")}
                         >
                             {page.component}
+
+                            {this.props.footer}
                         </div>
                     )}
 
@@ -303,7 +305,18 @@ Grid.propTypes = {
                     &nbsp;&nbsp;&nbsp;&nbsp;"cancel": "fas fa-times"<br>
                 }</code><br>
      */
-    icons: PropTypes.object
+    icons: PropTypes.object,
+
+    /**
+     * You can set a footer element that always be at the bottom of the app.<br>
+     * Du kannst ein Footer-Element setzen, das immer am Ende der App angezeigt wird.<br>
+     * <strong>Example:</strong><br><code>(<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;footer className="bg-white ml-sidebar-width p-3 text-center"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a footer<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;<br>
+                )</code><br>
+     */
+    footer: PropTypes.any
 };
 
 export default Grid;
