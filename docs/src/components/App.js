@@ -62,10 +62,10 @@ class App extends React.Component {
                     }
                 ]}
                 footer={(
-                    <footer className="bg-white ml-sidebar-width p-3 text-center">
+                    <footer className="bg-light ml-sidebar-width p-3 text-center">
                         Made with <span className="icon-heart text-danger" /> in Germany by LGK. Checkout <a href="https://lgk.io">my website</a> or follow me on <a href="https://twitter.com/lgkonline">Twitter</a>.<br />
                         The code is <a href="https://github.com/lgkonline/uisum/blob/master/LICENSE">MIT licensed</a>.<br />
-                        <a href="https://github.com/lgkonline/uisum">Uisum on GitHub</a>
+                        <a className="btn btn-link" href="https://github.com/lgkonline/uisum">Uisum on GitHub</a>
                     </footer>
                 )}
             >

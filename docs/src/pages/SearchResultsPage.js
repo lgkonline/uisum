@@ -78,7 +78,12 @@ class SearchResultsPage extends React.Component {
                                     >
                                         <div className="fluent-btn-ball" />
                                         <h4 className="list-group-item-heading">{r.title}</h4>
-                                        {r.description}
+
+                                        <div
+                                            dangerouslySetInnerHTML={{
+                                                __html: r.description
+                                            }}
+                                        />
                                     </a>
                                 )}
                             </div>
