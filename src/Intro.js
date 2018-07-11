@@ -7,14 +7,21 @@ import Utilities from "./Utilities";
  */
 
 class Intro extends React.Component {
+    static get defaultProps() {
+        return {
+            screenClass: "",
+            containerClass: ""
+        };
+    }
+
     componentDidMount() {
         Utilities.registerFluentBtns();
     }
 
     render() {
         return (
-            <div className="sign-in-screen">
-                <div className="sign-in-container mx-1">
+            <div className={"sign-in-screen " + this.props.screenClass}>
+                <div className={"sign-in-container mx-1 " + this.props.containerClass}>
                     <div className="jumbotron">
                         <div className="text-center">
                             <img style={{ maxWidth: "100px" }} src={this.props.logo} />
@@ -41,7 +48,17 @@ Intro.propTypes = {
     title: PropTypes.string,
 
     /**
-     * Inhalt
+     * Will extend <code>.sign-in-screen</code>.
+     */
+    screenClass: PropTypes.string,
+
+    /**
+     * Will extend <code>.sign-in-container</code>.
+     */
+    containerClass: PropTypes.string,
+
+    /**
+     * Content
      */
     children: PropTypes.any
 };

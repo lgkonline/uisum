@@ -6547,7 +6547,8 @@ label {
     display: none; } }
 
 .sign-in-screen {
-  padding-top: 48px; }
+  padding-top: 48px;
+  min-height: 100vh; }
   .sign-in-screen .sign-in-container {
     animation: enabledBlueAppPage .5s; }
   .sign-in-screen .jumbotron {
