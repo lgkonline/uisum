@@ -1,0 +1,107 @@
+@mixin openSidebarMenu() {
+    .ui-sidebar-hidden-on-open {
+        display: none;
+    }
+
+    .ui-sidebar-visible-on-open {
+        animation: fade-in 1s;
+        display: block;
+    }
+
+
+    .ui-sidebar-label {
+        display: inline-block;
+    }
+
+    .ui-sidebar {
+        box-shadow: .6rem 6rem 6rem rgba(0,0,0,.3);
+        // background-color: stronger-contrast($theme, 30%);
+    }
+
+    .ui-sidebar,
+    .ui-sidebar .ui-sidebar-btn {
+        width: 265px;
+    }
+
+    .ui-sub-sidebar {
+        left: 265px;
+    }
+
+    .ui-sidebar-dropdown-caret {
+        display: flex;
+    }
+
+    .ui-sidebar-dropdown {
+        .ui-sidebar-btn {
+            width: 100%;
+        }
+    }
+
+
+    /* search */
+    .ui-search {
+        background-color: rgba(255, 255, 255, 0.90);
+    }
+
+    .ui-search-btn {
+        display: none;
+    }
+
+    .ui-search-input-group {
+        display: flex;
+    }
+}
+
+@mixin ui-sidebar($width) {
+    .ui-sidebar-btn {
+        // color: white;
+        color: $themed-text-color;
+        width: $normal-size;
+        height: $normal-size;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding: 4px 12px;
+        font-size: $bla-btn-font-size;
+        font-weight: 300;
+        text-align: left;
+        display: block;
+        background-color: var(--sidebar-bg-color);
+        border: none;
+        @include slide-transition();
+
+        &:hover,
+        &:active {
+            color: $themed-text-color;
+            background-color: $bla-button-bg-hover;
+            border-color: transparent;
+        }
+
+        &:focus {
+            box-shadow: none !important;
+        }
+
+        &.active::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: $themed-text-color;
+
+            animation: fade-in .5s;
+        }        
+    }
+    
+    .ui-sidebar {
+        width: $width;
+        color: $themed-text-color;
+        background: var(--sidebar-bg-color);
+        position: fixed;
+        left: 0;
+        top: $header-height;
+        bottom: 0;
+        z-index: 3;
+        @include slide-transition();
+    }
+}
