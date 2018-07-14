@@ -70,6 +70,18 @@ class ReactComponentPage extends React.Component {
                                 }}
                             />
 
+                            {this.state.components[i].example &&
+                                <div>
+                                    <h3 className="mt-4 mb-3">{t("EXAMPLE")}</h3>
+
+                                    {React.createElement(
+                                        require("../../../src/" + this.state.components[i].displayName).default,
+                                        JSON.parse(this.state.components[i].example)[0],
+                                        JSON.parse(this.state.components[i].example)[1]
+                                    )}
+                                </div>
+                            }
+
                             {this.state.components[i].displayName == "Intro" &&
                                 <p>
                                     <a href="#intro-demo">See a demo</a>

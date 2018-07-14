@@ -3,8 +3,7 @@
 $theme: #1E2226;
 $primary: rgb(255, 38, 0);
 
-$header-height: 64px;
-$actions-height: 84px;
+// $actions-height: 84px;
 
 $fonts-direction: "../../dist/webfont/";
 
@@ -27,6 +26,7 @@ $fonts-direction: "../../dist/webfont/";
 .lgk-logo {
     a {
         color: $gray-200;
+        transition: color .4s;
 
         &:hover {
             color: orange;

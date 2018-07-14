@@ -1,13 +1,17 @@
 {
     "name": "uisum",
+<<<<<<< HEAD
     "version": "4.1.1",
+=======
+    "version": "4.2.2",
+>>>>>>> 0b4ca89400ae6e9530ad4a38731c03bc63eab599
     "description": "UI library for/with React",
     "main": "index.js",
     "scripts": {
         "test": "jest",
         "doc-build": "webpack -p",
         "build": "babel ./src --out-dir ./dist & node-sass ./dist/style.scss ./dist/style.css",
-        "doc": "react-docgen ./src -o ./docs/src/data/doc.json && node ./convertScssVarsToJson.js",
+        "doc": "react-docgen ./src -o ./docs/src/data/doc.json && node ./followUpDoc.js && node ./convertScssVarsToJson.js",
         "doc-doc": "react-docgen ./docs/src -o ./docs/src/data/doc-doc.json",
         "watch": "webpack -d --watch",
         "put-version": "put-version ./docs/index.html",
@@ -16,7 +20,8 @@
         "prepublishOnly": "node ./prepublish.js",
         "postpublish": "node ./postpublish.js",
         "serve": "http-server ./docs -o",
-        "start": "npm run serve | npm run watch"
+        "start": "npm run serve | npm run watch",
+        "start-no-open": "http-server ./docs | npm run watch"
     },
     "author": "Lars / LGK",
     "license": "MIT",

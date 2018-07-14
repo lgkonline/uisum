@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @mixin custom-scrollbar($thumb-color, $bg-color) {
     ::-webkit-scrollbar-thumb {
         background-color: rgba($thumb-color, .4);
@@ -188,3 +189,9 @@
         }
     }
 }
+=======
+@import "./mixins/_misc.scss";
+@import "./mixins/_sidebar.scss";
+@import "./mixins/_actions.scss";
+@import "./mixins/_switch.scss";
+>>>>>>> 0b4ca89400ae6e9530ad4a38731c03bc63eab599

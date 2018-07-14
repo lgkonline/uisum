@@ -18,6 +18,7 @@ const translations = {
     "GETTING_STARTED": ["Getting started", "Los geht's"],
     "STARTER_PROJECT": ["Starter project", "Starter-Projekt"],
     "SCSS_VARIABLES": ["SCSS variables", "SCSS Variablen"],
+    "EXAMPLE": ["Example", "Beispiel"],
     "SCSS_VARIABLES_DESC": [
         "These are special variables for Uisum. There are many others that come with Bootstrap.",
         "Dies sind Extra-Variablen für Uisum. Es gibt noch viele weitere Variablen, die mit Bootstrap kommen."
