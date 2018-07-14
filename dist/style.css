@@ -6728,7 +6728,7 @@ body {
 .ui-sidebar-toggler {
   position: fixed;
   width: 48px;
-  height: 120px;
+  height: 48px;
   left: 0;
   top: 0;
   z-index: 3; }
@@ -6743,7 +6743,7 @@ body {
   overflow: hidden; }
 
 .ui-header {
-  height: 120px;
+  height: 48px;
   color: #fff;
   position: fixed;
   top: 0;
@@ -6833,7 +6833,7 @@ body {
   background: var(--sidebar-bg-color);
   position: fixed;
   left: 0;
-  top: 120px;
+  top: 48px;
   bottom: 0;
   z-index: 3;
   transition: width 0.5s; }
@@ -6874,7 +6874,7 @@ body {
     background: var(--sidebar-bg-color);
     position: fixed;
     left: 0;
-    top: 120px;
+    top: 48px;
     bottom: 0;
     z-index: 3;
     transition: width 0.5s; }
@@ -6942,7 +6942,7 @@ body {
   padding-bottom: 10px;
   background-color: #fff;
   min-height: calc(100vh - 48px);
-  margin-top: 120px; }
+  margin-top: 48px; }
 
 .ui-header-logo {
   padding: 0 1rem;
@@ -7024,11 +7024,11 @@ body {
   display: flex;
   align-items: center; }
   .ui-actions-menu .nav-item {
-    height: 120px; }
+    height: 48px; }
   .ui-actions-menu .nav-link {
     display: flex;
     align-items: center;
-    height: 120px;
+    height: 48px;
     position: relative;
     margin-left: 2px;
     background-color: var(--action-link-bg-color); }

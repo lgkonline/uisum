@@ -50,7 +50,7 @@
 .ui-sidebar-toggler {
     position: fixed;
     width: $normal-size;
-    height: $actions-height;
+    height: $header-height;
     left: 0;
     top: 0;
     z-index: 3;
@@ -69,7 +69,7 @@
 }
 
 .ui-header {
-    height: $actions-height;
+    height: $header-height;
     color: $themed-text-color;
     position: fixed;
     top: 0;
@@ -209,7 +209,7 @@
    padding-bottom: 10px;
    background-color: $body-bg;
    min-height: calc(100vh - #{$normal-size});
-   margin-top: $actions-height;
+   margin-top: $header-height;
 }
 
 .ui-header-logo {
