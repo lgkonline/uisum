@@ -48,8 +48,6 @@ class Grid extends React.Component {
             "search": "icon-search",
             "actionMenu": "icon-dots-three-vertical",
             "menu": "icon-menu",
-            "menuDropdown": "icon-circle-left",
-            "menuDropdownActive": "icon-circle-down",
             "success": "icon-checkmark",
             "info": "icon-info",
             "warning": "icon-warning",
@@ -296,8 +294,6 @@ Grid.propTypes = {
                     &nbsp;&nbsp;&nbsp;&nbsp;"search": "fas fa-search",<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;"actionMenu": "fas fa-ellipsis-v ",<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;"menu": "fas fa-bars",<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;"menuDropdown": "fas fa-caret-left ",<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;"menuDropdownActive": "fas fa-caret-down ",<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;"success": "fas fa-check",<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;"info": "fas fa-info",<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;"warning": "fas fa-exclamation-triangle",<br>

@@ -7006,13 +7006,12 @@ body {
   margin-left: 1rem;
   animation: -sidebar-dropdown .2s; }
 
-.ui-sidebar-dropdown-caret {
+.ui-sidebar-dropdown-caret.caret {
   display: none;
-  font-size: 1.5rem;
   position: absolute;
-  right: 1rem;
-  top: 0;
-  bottom: 0;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
   align-items: center; }
 
 .ui-search {
@@ -7350,6 +7349,43 @@ body {
 
 .slider.round:before {
   border-radius: 50%; }
+
+.caret {
+  /* treat like a font icon */
+  font-family: 'blueicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.15em;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  /* END treat like a font icon */
+  --caret-size: .5em;
+  --caret-strength: .09em;
+  width: 1em; }
+  .caret::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--caret-size);
+    height: var(--caret-size);
+    background: transparent;
+    box-shadow: var(--caret-strength) var(--caret-strength) 0 currentColor;
+    transform: rotate(-45deg) translate(-50%, -50%);
+    margin-top: calc((var(--caret-size) + var(--caret-strength)) * -1);
+    transition: all .2s; }
+  .caret.caret-mirrored::before {
+    transform: rotate(135deg) translate(-50%, -50%); }
+  .caret.caret-open::before {
+    transform: rotate(45deg) translate(-50%, -50%); }
 
 .document-view-iframe {
   border: none;

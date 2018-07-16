@@ -12,4 +12,5 @@ exports.Page = require("./dist/Page.js")["default"];
 exports.Search = require("./dist/Search.js")["default"];
 exports.SidebarMenu = require("./dist/SidebarMenu.js")["default"];
 exports.Switch = require("./dist/Switch.js")["default"];
+exports.Caret = require("./dist/Caret.js")["default"];
 exports.Utilities = require("./dist/Utilities.js")["default"];

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Utilities from "./Utilities";
+import Caret from "./Caret";
 
 /**
  * List-Item und Link für die Sidebar.
@@ -79,9 +80,10 @@ class MenuItem extends React.Component {
                     onClick={event => this.onClick(event)}
                 >
                     {this.props.children &&
-                        <span
-                            className={"ui-sidebar-dropdown-caret " +
-                                (this.state.showDropdown ? uiGridRef.state.icons.menuDropdownActive : uiGridRef.state.icons.menuDropdown)}
+                        <Caret
+                            open={this.state.showDropdown}
+                            mirrored
+                            className="ui-sidebar-dropdown-caret mt-2"
                         />
                     }
                     <span className={icon}></span> <span className="ui-sidebar-label">{this.props.label}</span>

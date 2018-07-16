@@ -87,7 +87,9 @@ class App extends React.Component {
                     />
 
                     <MenuItem href="#/home" icon="icon-home" label="Start" isHome />
-                    <MenuItem href="#/getting-started" icon="icon-flag" label={t("GETTING_STARTED")} />
+                    <MenuItem href="#/getting-started" icon="icon-flag" label={t("GETTING_STARTED")}>
+                        <MenuItem href="#/utilities" icon="icon-embed" label="Utilities" />
+                    </MenuItem>
                     <MenuItem href="#/utilities" icon="icon-embed" label="Utilities" />
                     <MenuItem href="#/react-component" icon="icon-book" label={t("REACT_COMPONENTS")} />
                 </SidebarMenu>

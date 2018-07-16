@@ -269,12 +269,11 @@
     animation: -sidebar-dropdown .2s;
 }
 
-.ui-sidebar-dropdown-caret {
+.ui-sidebar-dropdown-caret.caret {
     display: none;
-    font-size: 1.5rem;
     position: absolute;
-    right: 1rem;
-    top: 0;
-    bottom: 0;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
     align-items: center;
 }
