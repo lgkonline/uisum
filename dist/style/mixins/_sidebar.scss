@@ -20,11 +20,11 @@
 
     .ui-sidebar,
     .ui-sidebar .ui-sidebar-btn {
-        width: 265px;
+        width: $sidebar-width;
     }
 
     .ui-sub-sidebar {
-        left: 265px;
+        left: $sidebar-width;
     }
 
     .ui-sidebar-dropdown-caret {

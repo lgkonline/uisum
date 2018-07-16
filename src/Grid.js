@@ -60,7 +60,8 @@ class Grid extends React.Component {
             match: null,
             history: [],
             hash: location.hash,
-            config: null
+            config: null,
+            expandSidebar: false
         };
 
         this.hideSidebar = this.hideSidebar.bind(this);
@@ -75,6 +76,7 @@ class Grid extends React.Component {
     static get defaultProps() {
         return {
             expandSidebar: false,
+            expandSidebarToggleable: false,
             hideSidebarMenu: false,
             pages: [],
             icons: this.defaultIcons
@@ -88,6 +90,7 @@ class Grid extends React.Component {
 
         this.setState({
             sidebarIn: this.props.sidebarIn,
+            expandSidebar: this.props.expandSidebar,
 
             // Merges default icon config with custom set icons
             icons: Object.assign(this.defaultIcons, this.props.icons)
@@ -193,21 +196,44 @@ class Grid extends React.Component {
                     className={"ui-grid" + (this.props.className ? this.props.className : "") +
                         (this.state.sidebarIn ? " open" : "") +
                         (this.props.hideSidebarMenu ? " hasNoSidebarMenu" : " hasSidebarMenu") +
-                        (this.props.expandSidebar ? " expand-sidebar" : "")}
+                        (this.state.expandSidebar ? " expand-sidebar" : "") +
+                        (this.props.expandSidebarToggleable ? " expand-sidebar-toggleable" : "")}
                     onClick={this.hideSidebar}
                 >
                     <div className="ui-sidebar-toggler">
                         {!this.props.hideSidebarMenu ?
-                            <button
-                                type="button"
-                                className="ui-open-menu ui-sidebar-btn btn btn-primary fluent-btn"
-                                onClick={() => {
-                                    this.setState({ sidebarIn: !this.state.sidebarIn });
-                                }}
-                            >
-                                <div className="fluent-btn-ball ui-sidebar-exception" />
-                                <span className={this.state.icons.menu}></span>
-                            </button>
+                            [
+                                <button
+                                    key={0}
+                                    type="button"
+                                    className="ui-open-menu ui-sidebar-btn btn btn-primary fluent-btn"
+                                    onClick={() => {
+                                        const expandSidebar = this.props.expandSidebar ? !this.state.expandSidebar : this.props.expandSidebar;
+
+                                        this.setState({
+                                            sidebarIn: expandSidebar ? false : !this.state.sidebarIn,
+                                            expandSidebar: expandSidebar
+                                        });
+                                    }}
+                                >
+                                    <div className="fluent-btn-ball ui-sidebar-exception" />
+                                    <span className={this.state.icons.menu}></span>
+                                </button>,
+                                this.props.expandSidebarToggleable &&
+                                <button
+                                    key={1}
+                                    type="button"
+                                    className="ui-toggle-expand-sidebar ui-sidebar-btn btn btn-primary fluent-btn"
+                                    onClick={() => {
+                                        this.setState({
+                                            expandSidebar: this.props.expandSidebar ? !this.state.expandSidebar : this.props.expandSidebar
+                                        });
+                                    }}
+                                >
+                                    <div className="fluent-btn-ball ui-sidebar-exception" />
+                                    <span className={this.state.icons.menu}></span>
+                                </button>
+                            ]
                             :
                             ""
                         }
@@ -273,6 +299,11 @@ Grid.propTypes = {
      * Die Sidebar ist bei Vollbild automatisch erweitert.
      */
     expandSidebar: PropTypes.bool,
+
+    /**
+     * Makes the expanded sidebar toggleable using the menu icon button. <code>expandSidebar</code> has to be <code>true</code> for this to take effect.
+     */
+    expandSidebarToggleable: PropTypes.bool,
 
     /**
      * Disables the sidebar.

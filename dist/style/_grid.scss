@@ -39,6 +39,10 @@
             animation: fade-in 1s;
         }
     }
+
+    .ui-toggle-expand-sidebar {
+        display: none;
+    }
 }
 
 .ui-header-wrapper {
@@ -75,16 +79,6 @@
     left: $normal-size;
     right: 0;
     z-index: 3;
-
-    // @media screen and (min-width: 768px) {
-    //     right: 1rem;
-
-    //     @-moz-document url-prefix() {
-    //         & {
-    //             right: calc(1rem + 1px);
-    //         }
-    //     }
-    // }
     
     .navbar-nav {
         margin: 0;
@@ -172,21 +166,26 @@
     
             .ui-page,
             .ml-sidebar-width {
-                margin-left: 265px;
+                margin-left: $sidebar-width;
             }
-    
-            .ui-sidebar-toggler {
+
+            .ui-open-menu {
                 display: none;
             }
-    
-            .ui-header {
+
+            .ui-toggle-expand-sidebar {
+                display: block;
+            }
+
+            &:not(.expand-sidebar-toggleable) .ui-header { 
                 left: 0;
             }
         }
     }
 }
 
-.ui-open-menu {
+.ui-open-menu,
+.ui-toggle-expand-sidebar {
    position: absolute !important;
    margin-top: 0;
    left: 0;
