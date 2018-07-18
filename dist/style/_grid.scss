@@ -138,6 +138,7 @@
 .ui-page {
     @include custom-scrollbar(#333, white);
     animation: enabledBlueAppPage .5s;
+    transition: margin-left .5s;
 }
 
 @include ui-sidebar($normal-size);
