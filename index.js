@@ -1,5 +1,6 @@
 exports.ActionMenu = require("./dist/ActionMenu.js")["default"];
 exports.ActionMenuItem = require("./dist/ActionMenuItem.js")["default"];
+exports.ActionMenuSwitch = require("./dist/ActionMenuSwitch.js")["default"];
 exports.Body = require("./dist/Body.js")["default"];
 exports.FluentBtn = require("./dist/FluentBtn.js")["default"];
 exports.Grid = require("./dist/Grid.js")["default"];

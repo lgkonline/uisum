@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import { Page, Body, Header, HeaderTitle, HeaderActions, Utilities, ActionMenu, ActionMenuItem } from "../../../index.js";
+import { Page, Body, Header, HeaderTitle, HeaderActions, Utilities, ActionMenu, ActionMenuItem, ActionMenuSwitch } from "../../../index.js";
 
 import { setTimeout } from "timers";
 
@@ -20,7 +20,8 @@ class BootstrapDemoPage extends React.Component {
         super();
 
         this.state = {
-            modalIn: false
+            modalIn: false,
+            checked: false
         };
     }
 
@@ -38,6 +39,12 @@ class BootstrapDemoPage extends React.Component {
 
                     <HeaderActions>
                         <ActionMenu>
+                            <ActionMenuSwitch
+                                label="Checked"
+                                checked={this.state.checked}
+                                onChange={() => this.setState({ checked: !this.state.checked })}
+                            />
+
                             <ActionMenuItem
                                 icon="icon-truck"
                                 label="Fehlermeldung zeigen und Seite wechseln"

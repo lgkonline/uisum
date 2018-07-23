@@ -18,7 +18,7 @@ class ActionMenuItem extends React.Component {
                 <a
                     {...this.props}
                     href={this.props.href}
-                    className={"nav-link " + this.props.className}
+                    className={"nav-link ui-actions-menu-item " + this.props.className}
                 >
                     <span className={this.props.icon} />
                     {this.props.label &&

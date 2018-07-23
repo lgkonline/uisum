@@ -28,7 +28,7 @@
             }
             
             .ui-actions-menu {
-                .nav-link:not(.ui-actions-menu-toggle) {
+                .ui-actions-menu-item:not(.ui-actions-menu-toggle) {
                     display: flex;
                 }
             }
@@ -39,7 +39,7 @@
             }
         }
 
-        .nav-link:not(.ui-actions-menu-toggle) {
+        .ui-actions-menu-item:not(.ui-actions-menu-toggle) {
             display: none;
         }
     }

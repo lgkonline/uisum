@@ -55,3 +55,7 @@
         @include actions(1200px);
     }
 }
+
+.ui-actions-menu-item {
+    display: flex;
+}
