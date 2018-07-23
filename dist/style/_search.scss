@@ -6,6 +6,7 @@
 
     &.ui-search-body {
         border: 1px solid #ddd;
+        background-color: $input-bg !important;
         border-radius: 4px;
 
         .ui-search-input-group {

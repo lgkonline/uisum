@@ -7029,6 +7029,7 @@ body {
   position: relative; }
   .ui-search.ui-search-body {
     border: 1px solid #ddd;
+    background-color: #fff !important;
     border-radius: 4px; }
     .ui-search.ui-search-body .ui-search-input-group {
       display: flex; }
