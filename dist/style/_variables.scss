@@ -15,6 +15,9 @@ $primary:       #007bff !default;
 // Main color for sidebar, header and other Uisum elements.
 $theme: $primary !default;
 
+// Background color for scrollbars (visible e.g. in Chrome).
+$scrollbar-bg-color: $theme !default;
+
 $theme-colors: () !default;
 $theme-colors: map-merge((
   "theme": $theme

@@ -79,7 +79,8 @@ class Grid extends React.Component {
             expandSidebarToggleable: false,
             hideSidebarMenu: false,
             pages: [],
-            icons: this.defaultIcons
+            icons: this.defaultIcons,
+            routerPageClass: ""
         };
     }
 
@@ -245,7 +246,7 @@ class Grid extends React.Component {
                         this.state.history.indexOf(page.name) > -1 &&
                         <div
                             key={page.name}
-                            className={"router-page " + (this.state.match[0] == page.name ? "active" : "")}
+                            className={"router-page " + this.props.routerPageClass + " " + (this.state.match[0] == page.name ? "active" : "")}
                         >
                             {page.component}
 
@@ -343,7 +344,12 @@ Grid.propTypes = {
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;<br>
                 )</code><br>
      */
-    footer: PropTypes.any
+    footer: PropTypes.any,
+
+    /**
+     * Extends <code>className</code> of <code>.router-page</code>.
+     */
+    routerPageClass: PropTypes.string
 };
 
 export default Grid;
