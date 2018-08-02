@@ -137,9 +137,10 @@ let Utilities = {
 Utilities.unregisterFluentBtns = () => {
     const btns = document.querySelectorAll(".fluent-btn");
 
-    btns.forEach(btn => {
+    for (let i = 0; i < btns.length; i++) {
+        const btn = btns[i];
         btn.removeEventListener("mousemove", event => Utilities.fluentBtnsListener(event, btn));
-    });
+    }
 };
 
 Utilities.registerFluentBtns = () => {
@@ -147,9 +148,10 @@ Utilities.registerFluentBtns = () => {
 
     const btns = document.querySelectorAll(".fluent-btn");
 
-    btns.forEach(btn => {
+    for (let i = 0; i < btns.length; i++) {
+        const btn = btns[i];
         btn.addEventListener("mousemove", event => Utilities.fluentBtnsListener(event, btn));
-    });
+    }
 };
 
 export default Utilities;
