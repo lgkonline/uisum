@@ -2,10 +2,6 @@ import React from "react";
 import { Page, Body, Header, HeaderTitle, ActionMenu, ActionMenuItem, Search, FluentBtn, Utilities } from "../../../index.js";
 
 class HomePage extends React.Component {
-    componentDidMount() {
-        Utilities.registerFluentBtns();
-    }
-
     render() {
         return (
             <Page>
