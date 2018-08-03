@@ -20,12 +20,27 @@ class GettingStartedPage extends React.Component {
     render() {
         const sections = [
             {
+                title: [
+                    <img key={0} src={require("../images/visual-studio-code-seeklogo.com.svg")} style={{ width: "1em" }} />,
+                    <span key={1}> Visual Studio Code Extension</span>
+                ],
+                body: (
+                    <div>
+                        <p>
+                            {t("VS_CODE_EXTENSION_TEXT")}
+                        </p>
+                        <FluentBtn className="btn btn-outline-primary" href="https://marketplace.visualstudio.com/items?itemName=lgk.uisum-snippets">
+                            <span className="icon-download" /> Download
+                        </FluentBtn>
+                    </div>
+                )
+            },
+            {
                 title: t("STARTER_PROJECT"),
                 body: (
-                    <div className="text-center">
+                    <div>
                         <FluentBtn className="btn btn-outline-primary" href={`https://github.com/lgkonline/${packageName}-starter`}>
-                            <span className="icon-github" /><br />
-                            {t("STARTER_PROJECT_TEXT")}
+                            <span className="icon-github" /> {t("STARTER_PROJECT_TEXT")}
                         </FluentBtn>
                     </div>
                 )

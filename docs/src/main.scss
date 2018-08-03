@@ -3,6 +3,15 @@
 $theme: #1E2226;
 $primary: rgb(255, 38, 0);
 
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "vs-code": #016EC5
+  ),
+  $theme-colors
+);
+
 $fonts-direction: "../../dist/webfont/";
 
 @import "../../dist/style.scss";

@@ -31,6 +31,10 @@ class HomePage extends React.Component {
                             <code>npm i -S {packageName}</code>
                         </p>
 
+                        <FluentBtn href="https://marketplace.visualstudio.com/items?itemName=lgk.uisum-snippets" className="btn btn-vs-code btn-lg mt-4">
+                            <img src={require("../images/visual-studio-code-seeklogo.com-white.svg")} style={{ width: "1em" }} /> {t("VS_CODE_EXTENSION_NEWS")}
+                        </FluentBtn><br />
+
                         <FluentBtn href="https://lgk.io/site/#/dev" className="btn btn-outline-primary btn-lg mt-4">
                             {t("LGK_DEV_OVERVIEW")}
                         </FluentBtn>

@@ -19,6 +19,7 @@ const translations = {
     "STARTER_PROJECT": ["Starter project", "Starter-Projekt"],
     "SCSS_VARIABLES": ["SCSS variables", "SCSS Variablen"],
     "EXAMPLE": ["Example", "Beispiel"],
+    "VS_CODE_EXTENSION_NEWS": ["There's now an extension for Visual Studio Code!", "Es gibt jetzt eine Erweiterung für Visual Studio Code!"],
     "SCSS_VARIABLES_DESC": [
         "These are special variables for Uisum. There are many others that come with Bootstrap.",
         "Dies sind Extra-Variablen für Uisum. Es gibt noch viele weitere Variablen, die mit Bootstrap kommen."
@@ -26,6 +27,10 @@ const translations = {
     "STARTER_PROJECT_TEXT": [
         "For a quick start clone this GitHub repo",
         "Für einen schnellen Einstieg, klone diese GitHub Repo"
+    ],
+    "VS_CODE_EXTENSION_TEXT": [
+        "This extension contains some helpful snippets, so it's much easier and quicker for you to work with Uisum.",
+        "Diese Erweiterung enthält einige hilfreiche Snippets, so dass es viel einfacher und schneller ist, mit Uisum zu arbeiten."
     ]
 };
 
