@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 
 /**
  * Caret icon component.
- * 
- * @example [{ "open": true }, null]
  */
 class Caret extends React.Component {
     static get defaultProps() {

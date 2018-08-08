@@ -1,7 +1,7 @@
 import React from "react";
 import Highlight from "react-highlight";
 
-import { Page, Body, Header, HeaderTitle, Utilities, FluentBtn } from "../../../index.js";
+import { Page, Body, Header, HeaderTitle, Utilities, FluentBtn } from "../../../index.dev.js";
 
 /**
  * A static class with some useful methods.

@@ -1,5 +1,5 @@
 import React from "react";
-import { Page, Body, Header, HeaderTitle, ActionMenu, ActionMenuItem, Search, FluentBtn, Utilities } from "../../../index.js";
+import { Page, Body, Header, HeaderTitle, ActionMenu, ActionMenuItem, Search, FluentBtn, Utilities } from "../../../index.dev.js";
 
 class HomePage extends React.Component {
     render() {

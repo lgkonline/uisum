@@ -8,8 +8,6 @@ import FluentBtn from "./FluentBtn";
 
 /**
  * Eine Suchleiste, die zur Seitenleiste hinzugefügt werden kann.
- * 
- * @example [{"body": true, "placeholder": "search"}, null]
  */
 class Search extends React.Component {
     constructor() {

@@ -7035,7 +7035,8 @@ body {
     background-color: #fff !important;
     border-radius: 4px; }
     .ui-search.ui-search-body .ui-search-input-group {
-      display: flex; }
+      display: flex;
+      align-items: center; }
     .ui-search.ui-search-body.focus {
       box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); }
   .ui-search.focus {

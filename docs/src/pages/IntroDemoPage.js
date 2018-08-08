@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Intro, FluentBtn } from "../../../index.js";
+import { Intro, FluentBtn } from "../../../index.dev.js";
 
 class IntroDemoPage extends React.Component {
     render() {

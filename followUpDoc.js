@@ -1,24 +1,23 @@
+// Adds example code to doc
+
 const fs = require("fs");
-const pathToDoc = "./docs/src/data/doc.json";
 
-let doc = require(pathToDoc);
+const packageName = require("./package.json").name;
+const docPath = "./docs/src/data/doc.json";
 
-// For each component
-Object.keys(doc).forEach(propName => {
-    let component = doc[propName];
+let doc = require(docPath);
 
-    let lines = component.description.split("\n");
+Object.keys(doc).forEach(prop => {
+    const displayName = doc[prop].displayName;
+    const exampleFilePath = "./docs/src/examples/" + displayName + ".js";
 
-    lines.forEach((line, key) => {
-        // console.log(line);
+    if (fs.existsSync(exampleFilePath)) {
+        // console.log(displayName + " has example");
 
-        if (line.startsWith("@example")) {
-            component.example = line.replace("@example", "").trim();
-            lines.splice(key, 1);
-        }
-    });
+        const exampleCode = fs.readFileSync(exampleFilePath, "utf8");
 
-    component.description = lines.join("\n");
+        doc[prop].exampleCode = exampleCode.replace('"../../../index.dev.js"', `"${packageName}"`);
+    }
 });
 
-fs.writeFileSync(pathToDoc, JSON.stringify(doc));
+fs.writeFileSync(docPath, JSON.stringify(doc, null, 4));

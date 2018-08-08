@@ -12,7 +12,8 @@ $theme-colors: map-merge(
   $theme-colors
 );
 
-$fonts-direction: "../../dist/webfont/";
+// $fonts-direction: "../../dist/webfont/";
+$font-family-sans-serif: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 @import "../../dist/style.scss";
 

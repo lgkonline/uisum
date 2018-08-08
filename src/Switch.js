@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 
 /**
  * Switch.
- * 
- * @example [{}, null]
  */
 class Switch extends React.Component {
     static get defaultProps() {

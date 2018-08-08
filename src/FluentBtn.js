@@ -4,8 +4,6 @@ import PropTypes from "prop-types";
 /**
  * Shortcut für <code>&lt;button class="fluent-btn"&gt;&lt;div className="fluent-btn-ball"&gt;&lt;/div&gt;&lt;/button&gt;</code>.
  * Erzeugt Button, mit einem Acrylic-Effekt.
- * 
- * @example [ { "className": "btn btn-lg btn-primary", "style": {"width":"300px"} }, "Hello World" ]
  */
 
 class FluentBtn extends React.Component {

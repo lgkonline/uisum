@@ -1,7 +1,7 @@
 import React from "react";
 import Highlight from "react-highlight";
 
-import { Page, Body, Header, HeaderTitle, MenuItem, Utilities, FluentBtn, ActionMenu, ActionMenuItem } from "../../../index.js";
+import { Page, Body, Header, HeaderTitle, MenuItem, Utilities, FluentBtn, ActionMenu, ActionMenuItem } from "../../../index.dev.js";
 
 import scssVariables from "../data/scss-variables.json";
 

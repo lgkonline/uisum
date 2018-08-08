@@ -1,7 +1,7 @@
 import React from "react";
 import { LgkPillComponent } from "lgk";
 
-import { Grid, SidebarMenu, MenuItem, Search } from "../../../index.js";
+import { Grid, SidebarMenu, MenuItem, Search } from "../../../index.dev.js";
 import Translation from "../Translation";
 
 import HomePage from "../pages/HomePage";
@@ -65,6 +65,7 @@ class App extends React.Component {
                 footer={(
                     <footer className="bg-light ml-sidebar-width p-3 text-center">
                         Made with <span className="icon-heart text-danger" /> in Germany by LGK. Checkout <a href="https://lgk.io">my website</a> or follow me on <a href="https://twitter.com/lgkonline">Twitter</a>.<br />
+                        The font HK Grotesk by Hanken Design Co is <a href="https://www.fontsquirrel.com/license/hk-grotesk">SIL licensed</a>. It is only used for the docs and is not part of Uisum.<br />
                         The code is <a href="https://github.com/lgkonline/uisum/blob/master/LICENSE">MIT licensed</a>.<br />
                         <a className="btn btn-link" href="https://github.com/lgkonline/uisum">Uisum on GitHub</a>
                     </footer>

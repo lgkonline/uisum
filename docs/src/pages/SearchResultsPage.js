@@ -1,5 +1,5 @@
 import React from "react";
-import { Page, Body, Header, HeaderTitle, ActionMenu, ActionMenuItem, Utilities } from "../../../index.js";
+import { Page, Body, Header, HeaderTitle, ActionMenu, ActionMenuItem, Utilities } from "../../../index.dev.js";
 
 import doc from "../data/doc.json";
 import docDoc from "../data/doc-doc.json";

@@ -118,18 +118,31 @@ class Grid extends React.Component {
         };
     }
 
+    setLocalStorageState(stateName) {
+        if (this.state[stateName]) {
+            localStorage.setItem("ui-" + stateName, "true");
+        }
+        else {
+            localStorage.setItem("ui-" + stateName, "false");
+        }
+    }
+
+    setLocalStorageStates() {
+        this.setLocalStorageState("expandSidebar");
+    }
+
     componentWillMount() {
         document.addEventListener("toggleSidebar", () => {
             this.toggleSidebar();
         }, false);
 
         this.setState({
-            sidebarIn: this.props.sidebarIn,
-            expandSidebar: this.props.expandSidebar,
+            sidebarIn: localStorage.getItem("ui-sidebarIn") ? localStorage.getItem("ui-sidebarIn") == "true" : this.props.sidebarIn,
+            expandSidebar: localStorage.getItem("ui-expandSidebar") ? localStorage.getItem("ui-expandSidebar") == "true" : this.props.expandSidebar,
 
             // Merges default icon config with custom set icons
             icons: Object.assign(this.defaultIcons, this.props.icons)
-        });
+        }, this.setLocalStorageStates);
 
         this.initMatch();
     }
@@ -181,7 +194,7 @@ class Grid extends React.Component {
         if (this.state.sidebarIn) {
             this.hideSidebar(event);
         }
-        this.setState({ sidebarIn: true });
+        this.setState({ sidebarIn: true }, this.setLocalStorageStates);
     }
 
     hideSidebar(e) {
@@ -197,7 +210,7 @@ class Grid extends React.Component {
             Utilities.hasClass(e.target, "ui-sidebar-dropdown-icon") ||
             Utilities.hasClass(e.target, "ui-sidebar-exception")
         )) {
-            this.setState({ sidebarIn: false });
+            this.setState({ sidebarIn: false }, this.setLocalStorageStates);
         }
     }
 
@@ -248,7 +261,7 @@ class Grid extends React.Component {
                                         this.setState({
                                             sidebarIn: expandSidebar ? false : !this.state.sidebarIn,
                                             expandSidebar: expandSidebar
-                                        });
+                                        }, this.setLocalStorageStates);
                                     }}
                                 >
                                     <div className="fluent-btn-ball ui-sidebar-exception" />
@@ -262,7 +275,7 @@ class Grid extends React.Component {
                                     onClick={() => {
                                         this.setState({
                                             expandSidebar: this.props.expandSidebar ? !this.state.expandSidebar : this.props.expandSidebar
-                                        });
+                                        }, this.setLocalStorageStates);
                                     }}
                                 >
                                     <div className="fluent-btn-ball ui-sidebar-exception" />

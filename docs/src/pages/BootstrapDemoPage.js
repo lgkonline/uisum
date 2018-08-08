@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-import { Page, Body, Header, HeaderTitle, HeaderActions, Utilities, ActionMenu, ActionMenuItem, ActionMenuSwitch } from "../../../index.js";
+import { Page, Body, Header, HeaderTitle, HeaderActions, Utilities, ActionMenu, ActionMenuItem, ActionMenuSwitch } from "../../../index.dev.js";
 
 import { setTimeout } from "timers";
 
