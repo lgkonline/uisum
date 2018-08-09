@@ -6,7 +6,7 @@ import Utilities from "./Utilities";
 class Header extends React.Component {
     render() {
         return (
-            <div className="ui-header ui-header-extension">
+            <div className="ui-header">
                 <div className="ui-header-wrapper" onClick={() => Utilities.scrollToTop()} />
 
                 {this.props.children}

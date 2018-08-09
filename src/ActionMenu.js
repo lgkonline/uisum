@@ -11,6 +11,8 @@ class ActionMenu extends React.Component {
     constructor() {
         super();
 
+        this.uniqueId = "ui-action-menu-" + Utilities.guid();
+
         this.state = {
             actionsToggledIn: null
         }
@@ -26,24 +28,27 @@ class ActionMenu extends React.Component {
         this.initToggleStatus();
 
         document.querySelector(".ui-wrapper").onclick = (event) => {
-            this.toggleActions();
+            Utilities.hideActions();
+            this.initToggleStatus();
         };
     }
 
     toggleActions() {
-        Utilities.toggleActions();
+        Utilities.toggleActions([document.getElementById(this.uniqueId).parentElement]);
         this.initToggleStatus();
     }
 
     initToggleStatus() {
+        const uiActionsEl = document.querySelector(".ui-actions");
+
         this.setState({
-            actionsToggledIn: Utilities.hasClass(document.querySelector(".ui-actions"), "open")
+            actionsToggledIn: uiActionsEl && Utilities.hasClass(uiActionsEl, "open")
         });
     }
 
     render() {
         return (
-            <ul className="ui-actions-menu nav navbar-nav navbar-right fluent-btn themed">
+            <ul id={this.uniqueId} className="ui-actions-menu nav navbar-nav navbar-right fluent-btn themed">
                 <div className="fluent-btn-ball" />
 
                 {!this.state.actionsToggledIn && !this.props.hideToggleAction ?

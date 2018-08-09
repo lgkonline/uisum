@@ -51,13 +51,27 @@ let Utilities = {
         document.querySelectorAll(".ui-status-success")[0].style.display = "";
     },
 
-    toggleActions: function () {
+    toggleActions: function (uiActionElements) {
         this.toggleClass(document.querySelector(".ui-wrapper"), "active");
         this.toggleClass(document.querySelector(".ui-grid"), "wrapper-in");
 
-        var els = document.querySelectorAll(".ui-actions");
-        for (var i = 0; i < els.length; i++) {
-            this.toggleClass(els[i], "open");
+        if (!uiActionElements) {
+            uiActionElements = document.querySelectorAll(".ui-actions");
+        }
+
+        for (var i = 0; i < uiActionElements.length; i++) {
+            this.toggleClass(uiActionElements[i], "open");
+        }
+    },
+
+    hideActions: function () {
+        this.removeClass(document.querySelector(".ui-wrapper"), "active");
+        this.removeClass(document.querySelector(".ui-grid"), "wrapper-in");
+
+        uiActionElements = document.querySelectorAll(".ui-actions");
+
+        for (var i = 0; i < uiActionElements.length; i++) {
+            this.removeClass(uiActionElements[i], "open");
         }
     },
 

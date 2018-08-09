@@ -115,7 +115,7 @@ label {
 }
 
 @media screen and (max-width: 768px) {
-    .ui-header-extension .ui-header-logo-title-labels:not(.keep) {
+    .ui-header .ui-header-logo-title-labels:not(.keep) {
         display: none;
     }
 }

@@ -26,7 +26,8 @@ class MenuItem extends React.Component {
             href: "javascript:void(0)",
             isActive: false,
             isHome: false,
-            dropdownClassName: ""
+            dropdownClassName: "",
+            stacked: false
         };
     }
 
@@ -67,7 +68,7 @@ class MenuItem extends React.Component {
         };
 
         Object.keys(this.props).map(key => {
-            if (key != "isActive" && key != "isHome" && key != "children" && key != "dropdownClassName" && key != "ballClassName") {
+            if (key != "isActive" && key != "isHome" && key != "children" && key != "dropdownClassName" && key != "ballClassName" && key != "stacked") {
                 props[key] = this.props[key];
             }
         });
@@ -76,7 +77,10 @@ class MenuItem extends React.Component {
             <div>
                 <a
                     {...props}
-                    className={className + (this.props.isActive || this.state.active ? " active" : "")}
+                    className={className +
+                        (this.props.isActive || this.state.active ? " active" : "") +
+                        (this.props.stacked ? " text-center ui-sidebar-btn-stacked" : "")
+                    }
                     onClick={event => this.onClick(event)}
                 >
                     {this.props.children &&
@@ -86,7 +90,8 @@ class MenuItem extends React.Component {
                             className="ui-sidebar-dropdown-caret mt-2"
                         />
                     }
-                    <span className={icon}></span> <span className="ui-sidebar-label">{this.props.label}</span>
+                    <span className={icon + " ui-sidebar-icon"}></span>
+                    {" "}<span className={"ui-sidebar-label" + (this.props.stacked ? " small" : "")}>{this.props.label}</span>
                 </a>
                 {this.state.showDropdown &&
                     <div className={"ui-sidebar-dropdown " + this.props.dropdownClassName}>
@@ -142,7 +147,12 @@ MenuItem.propTypes = {
     /**
      * Werden in einem Dropdown-Menü angezeigt.
      */
-    children: PropTypes.any
+    children: PropTypes.any,
+
+    /**
+     * Enables stacked layout. The label will be underneath the icon.
+     */
+    stacked: PropTypes.bool
 };
 
 export default MenuItem;

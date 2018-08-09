@@ -128,7 +128,9 @@ class Grid extends React.Component {
     }
 
     setLocalStorageStates() {
-        this.setLocalStorageState("expandSidebar");
+        if (this.props.expandSidebarToggleable) {
+            this.setLocalStorageState("expandSidebar");
+        }
     }
 
     componentWillMount() {
@@ -258,10 +260,15 @@ class Grid extends React.Component {
                                     onClick={() => {
                                         const expandSidebar = this.props.expandSidebar ? !this.state.expandSidebar : this.props.expandSidebar;
 
-                                        this.setState({
-                                            sidebarIn: expandSidebar ? false : !this.state.sidebarIn,
-                                            expandSidebar: expandSidebar
-                                        }, this.setLocalStorageStates);
+                                        let updates = {
+                                            sidebarIn: expandSidebar ? false : !this.state.sidebarIn
+                                        };
+
+                                        if (this.props.expandSidebarToggleable) {
+                                            updates.expandSidebar = this.props.expandSidebar ? !this.state.expandSidebar : this.props.expandSidebar;
+                                        }
+
+                                        this.setState(updates, this.setLocalStorageStates);
                                     }}
                                 >
                                     <div className="fluent-btn-ball ui-sidebar-exception" />

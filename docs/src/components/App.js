@@ -1,7 +1,7 @@
 import React from "react";
 import { LgkPillComponent } from "lgk";
 
-import { Grid, SidebarMenu, MenuItem, Search } from "../../../index.dev.js";
+import { Grid, SidebarMenu, MenuItem, Search, Tabs } from "../../../index.dev.js";
 import Translation from "../Translation";
 
 import HomePage from "../pages/HomePage";
@@ -31,7 +31,6 @@ class App extends React.Component {
         return (
             <Grid
                 expandSidebar
-                expandSidebarToggleable
                 pages={[
                     {
                         name: "home",
@@ -88,13 +87,20 @@ class App extends React.Component {
                         placeholder={t("SEARCH")}
                     />
 
-                    <MenuItem href="#/home" icon="icon-home" label="Start" isHome />
-                    <MenuItem href="#/getting-started" icon="icon-flag" label={t("GETTING_STARTED")} />
-                    <MenuItem href="#/utilities" icon="icon-embed" label="Utilities" />
-                    <MenuItem href="#/react-component" icon="icon-book" label={t("REACT_COMPONENTS")} />
+                    <MenuItem href="#/home" icon="icon-home" label="Start" isHome stacked />
+                    <MenuItem href="#/getting-started" icon="icon-flag" label={t("GETTING_STARTED")} stacked />
+                    <MenuItem href="#/utilities" icon="icon-embed" label="Utilities" stacked />
+                    <MenuItem href="#/react-component" icon="icon-book" label={t("REACT_COMPONENTS")} stacked />
                 </SidebarMenu>
 
                 <LgkPillComponent />
+
+                <Tabs mobileOnly>
+                    <MenuItem href="#/home" icon="icon-home" label="Start" isHome stacked />
+                    <MenuItem href="#/getting-started" icon="icon-flag" label={t("GETTING_STARTED")} stacked />
+                    <MenuItem href="#/utilities" icon="icon-embed" label="Utilities" stacked />
+                    <MenuItem href="#/react-component" icon="icon-book" label="Docs" stacked />
+                </Tabs>
             </Grid>
         );
     }

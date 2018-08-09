@@ -7,8 +7,14 @@ $actions-height: 120px !default;
 // Height of header and child elements.
 $header-height: $normal-size !default;
 
+// Height of sidebar menu items.
+$sidebar-menu-item-height: $normal-size !default;
+
 // Sidebar width when expanded
 $sidebar-width: 265px !default;
+
+// Height of tabs on the bottom
+$tabs-height: 68px !default;
 
 $primary:       #007bff !default;
 

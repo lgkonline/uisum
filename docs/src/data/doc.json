@@ -719,6 +719,17 @@
                 },
                 "required": false,
                 "description": "Werden in einem Dropdown-Menü angezeigt."
+            },
+            "stacked": {
+                "type": {
+                    "name": "bool"
+                },
+                "required": false,
+                "description": "Enables stacked layout. The label will be underneath the icon.",
+                "defaultValue": {
+                    "value": "false",
+                    "computed": false
+                }
             }
         }
     },
@@ -965,5 +976,26 @@
             }
         },
         "exampleCode": "import React from \"react\";\r\nimport { Switch } from \"uisum\";\r\n\r\nclass SwitchExample extends React.Component {\r\n    constructor() {\r\n        super();\r\n\r\n        this.state = {\r\n            isChecked: true\r\n        };\r\n    }\r\n\r\n    render() {\r\n        return (\r\n            <div className=\"row\">\r\n                <div className=\"col-md-6\">\r\n                    <h4>Normal switch</h4>\r\n\r\n                    <Switch\r\n                        checked={this.state.isChecked}\r\n                        onChange={() => this.setState({ isChecked: !this.state.isChecked })}\r\n                    />\r\n                </div>\r\n\r\n                <div className=\"col-md-6\">\r\n                    <h4>Switch with a slider label</h4>\r\n\r\n                    <Switch\r\n                        className=\"lg\"\r\n                        checked={this.state.isChecked}\r\n                        onChange={() => this.setState({ isChecked: !this.state.isChecked })}\r\n                        sliderLabel={this.state.isChecked ? \"🎉\" : \"😒\"}\r\n                    />\r\n                </div>\r\n            </div>\r\n        );\r\n    }\r\n}\r\n\r\nexport default SwitchExample;"
+    },
+    "src\\Tabs.js": {
+        "description": "Shows tab bar on the bottom side. Can be filled with <code>&lt;MenuItem stacked /&gt;</code> elements.",
+        "displayName": "Tabs",
+        "methods": [],
+        "props": {
+            "children": {
+                "type": {
+                    "name": "any"
+                },
+                "required": false,
+                "description": ""
+            },
+            "mobileOnly": {
+                "type": {
+                    "name": "bool"
+                },
+                "required": false,
+                "description": "Tabs will only be visible on smaller screens (Bootstrap's \"sm\")."
+            }
+        }
     }
 }

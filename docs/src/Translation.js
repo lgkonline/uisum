@@ -20,7 +20,6 @@ const translations = {
     "SCSS_VARIABLES": ["SCSS variables", "SCSS Variablen"],
     "EXAMPLE": ["Example", "Beispiel"],
     "SHOW_EXAMPLE": ["Show example", "Beispiel zeigen"],
-    "VS_CODE_EXTENSION_NEWS": ["There's now an extension for Visual Studio Code!", "Es gibt jetzt eine Erweiterung für Visual Studio Code!"],
     "SCSS_VARIABLES_DESC": [
         "These are special variables for Uisum. There are many others that come with Bootstrap.",
         "Dies sind Extra-Variablen für Uisum. Es gibt noch viele weitere Variablen, die mit Bootstrap kommen."

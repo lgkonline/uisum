@@ -1,0 +1,53 @@
+.ui-tabs {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $tabs-height;
+    background-color: $theme;
+
+    display: flex;
+
+    & > * {
+        flex-grow: 1;
+        flex-basis: 0;
+        overflow: hidden;
+    }
+
+    .ui-sidebar-btn {
+        width: auto !important;
+        height: 100% !important;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &.active {
+            &::before {
+                width: initial;
+                height: 2px;
+                top: initial;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    .ui-sidebar-icon {
+        display: block !important;
+    }
+
+    .ui-sidebar-label {
+        display: initial !important;
+    }
+
+    // Adds padding-bottom to all .router-page's that come after .ui-tabs
+    &:not(.d-sm-none) ~ .router-page {
+        height: calc(100vh - #{$tabs-height});
+    }
+}
+
+@media screen and (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
+    .ui-tabs.d-sm-none ~ .router-page {
+        height: calc(100vh - #{$tabs-height});
+    }
+}

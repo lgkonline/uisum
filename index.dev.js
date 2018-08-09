@@ -13,5 +13,6 @@ exports.Page = require("./src/Page.js")["default"];
 exports.Search = require("./src/Search.js")["default"];
 exports.SidebarMenu = require("./src/SidebarMenu.js")["default"];
 exports.Switch = require("./src/Switch.js")["default"];
+exports.Tabs = require("./src/Tabs.js")["default"];
 exports.Caret = require("./src/Caret.js")["default"];
 exports.Utilities = require("./src/Utilities.js")["default"];
