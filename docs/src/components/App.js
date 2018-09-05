@@ -6,6 +6,7 @@ import Translation from "../Translation";
 
 import HomePage from "../pages/HomePage";
 import GettingStartedPage from "../pages/GettingStartedPage";
+import CustomizationsPage from "../pages/CustomizationsPage";
 import UtilitiesPage from "../pages/UtilitiesPage";
 import ReactComponentPage from "../pages/ReactComponentPage";
 import BootstrapDemoPage from "../pages/BootstrapDemoPage";
@@ -39,6 +40,10 @@ class App extends React.Component {
                     {
                         name: "getting-started",
                         component: <GettingStartedPage />
+                    },
+                    {
+                        name: "customizations",
+                        component: <CustomizationsPage />
                     },
                     {
                         name: "utilities",
@@ -89,6 +94,7 @@ class App extends React.Component {
 
                     <MenuItem href="#/home" icon="icon-home" label="Start" isHome stacked />
                     <MenuItem href="#/getting-started" icon="icon-flag" label={t("GETTING_STARTED")} stacked />
+                    <MenuItem href="#/customizations" icon="icon-paint-format" label={t("CUSTOMIZATIONS")} stacked />
                     <MenuItem href="#/utilities" icon="icon-embed" label="Utilities" stacked />
                     <MenuItem href="#/react-component" icon="icon-book" label={t("REACT_COMPONENTS")} stacked />
                 </SidebarMenu>

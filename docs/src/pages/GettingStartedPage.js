@@ -3,8 +3,6 @@ import Highlight from "react-highlight";
 
 import { Page, Body, Header, HeaderTitle, FluentBtn } from "../../../index.dev.js";
 
-import scssVariables from "../data/scss-variables.json";
-
 /**
  * Markup templates and examples.
  */
@@ -165,34 +163,6 @@ So you can also use classes like .text-theme and .bg-theme.
 @import "~${packageName}/dist/style.scss";
 `
                         }</Highlight>
-                    </div>
-                )
-            },
-            {
-                title: t("SCSS_VARIABLES"),
-                body: (
-                    <div>
-                        <p>{t("SCSS_VARIABLES_DESC")}</p>
-
-                        <table className="table">
-                            <thead>
-                                <tr>
-                                    <th>Variable</th>
-                                    <th>Default value</th>
-                                    <th>Description</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                {scssVariables.map((sc, key) =>
-                                    <tr key={key}>
-                                        <td><code>{sc.variable}</code></td>
-                                        <td><code>{sc.value}</code></td>
-                                        <td>{sc.description}</td>
-                                    </tr>
-                                )}
-                            </tbody>
-                        </table>
                     </div>
                 )
             }

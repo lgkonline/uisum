@@ -17,12 +17,13 @@ const translations = {
     "DOCUMENTATION": ["Documentation", "Dokumentation"],
     "GETTING_STARTED": ["Getting started", "Los geht's"],
     "STARTER_PROJECT": ["Starter project", "Starter-Projekt"],
-    "SCSS_VARIABLES": ["SCSS variables", "SCSS Variablen"],
+    "SCSS_VARIABLES": ["Sass variables", "Sass Variablen"],
     "EXAMPLE": ["Example", "Beispiel"],
     "SHOW_EXAMPLE": ["Show example", "Beispiel zeigen"],
+    "CUSTOMIZATIONS": ["Customize", "Anpassen"],
     "SCSS_VARIABLES_DESC": [
-        "These are special variables for Uisum. There are many others that come with Bootstrap.",
-        "Dies sind Extra-Variablen für Uisum. Es gibt noch viele weitere Variablen, die mit Bootstrap kommen."
+        "The easiest and cleanest way to customize Uisum is to override the default values of Sass variables. The following table shows all overwritable variables. Note that there are many more variables defined by Bootstrap. The easiest way to change these is with Customize Bootstrap.",
+        "Der einfachste und sauberste Weg, Uisum anzupassen ist, die Standard-Werte von Sass-Variablen zu überschreiben. Die folgende Tabelle zeigt alle überschreibbare Variablen. Beachte, dass es noch viele weitere Variablen gibt, die durch Bootstrap definiert sind. Diese kannst du am einfachsten mit Customize Bootstrap verändern."
     ],
     "STARTER_PROJECT_TEXT": [
         "For a quick start clone this GitHub repo",
