@@ -27,10 +27,14 @@ class ActionMenu extends React.Component {
     componentDidMount() {
         this.initToggleStatus();
 
-        document.querySelector(".ui-wrapper").onclick = (event) => {
-            Utilities.hideActions();
-            this.initToggleStatus();
-        };
+        const uiWrapper = document.querySelector(".ui-wrapper");
+
+        if (uiWrapper) {
+            uiWrapper.onclick = (event) => {
+                Utilities.hideActions();
+                this.initToggleStatus();
+            };
+        }
     }
 
     toggleActions() {
@@ -55,7 +59,7 @@ class ActionMenu extends React.Component {
                     <ActionMenuItem
                         className="ui-actions-menu-toggle px-3"
                         onClick={() => this.toggleActions()}
-                        icon={uiGridRef.state.icons.actionMenu}
+                        icon={window.uiGridRef && window.uiGridRef.state.icons.actionMenu}
                     />
                     : ""
                 }

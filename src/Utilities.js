@@ -68,7 +68,7 @@ let Utilities = {
         this.removeClass(document.querySelector(".ui-wrapper"), "active");
         this.removeClass(document.querySelector(".ui-grid"), "wrapper-in");
 
-        uiActionElements = document.querySelectorAll(".ui-actions");
+        const uiActionElements = document.querySelectorAll(".ui-actions");
 
         for (var i = 0; i < uiActionElements.length; i++) {
             this.removeClass(uiActionElements[i], "open");
