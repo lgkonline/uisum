@@ -184,6 +184,13 @@ Utilities.startLoading();`}</Highlight>
                                             Read more about in <a href="https://getbootstrap.com/docs/3.3/components/#page-header">the v3 docs</a>.
                                         </td>
                                     </tr>
+                                    <tr>
+                                        <td><code>.ui-actions-menu-item</code></td>
+                                        <td>
+                                            When you place a custom component into <code>ActionMenu</code>, make sure to give it this className, so it will be hidden on smaller
+                                            screens and the action menu isn't extended.
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </article>

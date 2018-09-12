@@ -25,12 +25,14 @@ class Search extends React.Component {
         return {
             sidebar: false,
             body: false,
+            actionMenu: false,
             reset: false,
             value: "",
             onChange: (event) => { },
             onSubmit: (event) => { },
             placeholder: "",
-            autoFocus: false
+            autoFocus: false,
+            className: ""
         };
     }
 
@@ -49,7 +51,12 @@ class Search extends React.Component {
     render() {
         return (
             <form
-                className={"ui-search" + (this.props.body ? " ui-search-body" : "") + (this.state.focus ? " focus" : "")}
+                className={"ui-search" +
+                    ((this.props.body || this.props.actionMenu) ? " ui-search-normalize" : "") +
+                    (this.props.body ? " ui-search-body" : "") +
+                    (this.props.actionMenu ? " ui-actions-menu-item" : "") +
+                    (this.state.focus ? " focus" : "") +
+                    (this.props.className ? " " + this.props.className : "")}
                 onSubmit={event => {
                     event.preventDefault();
                     uiGridRef.setState({ sidebarIn: false });
@@ -128,17 +135,22 @@ class Search extends React.Component {
 
 Search.propTypes = {
     /**
-     * Wird Komponente in der Sidebar genutzt?
+     * Is component in sidebar?
      */
     sidebar: PropTypes.bool,
 
     /**
-     * Wird Komponente im Body genutzt?
+     * Is component in body?
      */
     body: PropTypes.bool,
 
     /**
-     * Erlaube Zurücksetzen?
+     * Is component in action menu?
+     */
+    actionMenu: PropTypes.bool,
+
+    /**
+     * Allow reset?
      */
     reset: PropTypes.bool,
 
@@ -146,7 +158,8 @@ Search.propTypes = {
     onChange: PropTypes.func,
     onSubmit: PropTypes.func,
     placeholder: PropTypes.string,
-    autoFocus: PropTypes.bool
+    autoFocus: PropTypes.bool,
+    className: PropTypes.string
 };
 
 export default Search;

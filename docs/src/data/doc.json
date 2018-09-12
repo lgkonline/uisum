@@ -906,7 +906,7 @@
                     "name": "bool"
                 },
                 "required": false,
-                "description": "Wird Komponente in der Sidebar genutzt?",
+                "description": "Is component in sidebar?",
                 "defaultValue": {
                     "value": "false",
                     "computed": false
@@ -917,7 +917,18 @@
                     "name": "bool"
                 },
                 "required": false,
-                "description": "Wird Komponente im Body genutzt?",
+                "description": "Is component in body?",
+                "defaultValue": {
+                    "value": "false",
+                    "computed": false
+                }
+            },
+            "actionMenu": {
+                "type": {
+                    "name": "bool"
+                },
+                "required": false,
+                "description": "Is component in action menu?",
                 "defaultValue": {
                     "value": "false",
                     "computed": false
@@ -928,7 +939,7 @@
                     "name": "bool"
                 },
                 "required": false,
-                "description": "Erlaube Zurücksetzen?",
+                "description": "Allow reset?",
                 "defaultValue": {
                     "value": "false",
                     "computed": false
@@ -986,6 +997,17 @@
                 "description": "",
                 "defaultValue": {
                     "value": "false",
+                    "computed": false
+                }
+            },
+            "className": {
+                "type": {
+                    "name": "string"
+                },
+                "required": false,
+                "description": "",
+                "defaultValue": {
+                    "value": "\"\"",
                     "computed": false
                 }
             }
