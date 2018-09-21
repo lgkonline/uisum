@@ -45,7 +45,7 @@ class Search extends React.Component {
         //     document.dispatchEvent(window.toggleSidebarEvent);
         // }
 
-        uiGridRef.setState({ sidebarIn: !uiGridRef.state.sidebarIn });
+        window.uiGridRef.setState({ sidebarIn: !window.uiGridRef.state.sidebarIn });
     }
 
     render() {
@@ -59,7 +59,7 @@ class Search extends React.Component {
                     (this.props.className ? " " + this.props.className : "")}
                 onSubmit={event => {
                     event.preventDefault();
-                    uiGridRef.setState({ sidebarIn: false });
+                    window.uiGridRef.setState({ sidebarIn: false });
                     this.props.onSubmit(event);
                 }}
             >
@@ -69,7 +69,7 @@ class Search extends React.Component {
                         onClick={() => document.getElementById(this.SearchControlId).focus()}
                     >
                         <span className="input-group-text">
-                            <span className={uiGridRef.state.icons.search} />
+                            <span className={window.uiGridRef && window.uiGridRef.state.icons.search} />
                         </span>
                     </div>
                     <input
@@ -106,7 +106,7 @@ class Search extends React.Component {
                                     });
                                 }}
                             >
-                                <span className={uiGridRef.state.icons.cancel} style={{ fontSize: "1rem" }} />
+                                <span className={window.uiGridRef && window.uiGridRef.state.icons.cancel} style={{ fontSize: "1rem" }} />
                             </FluentBtn>
                         </div>
                     }
@@ -118,7 +118,7 @@ class Search extends React.Component {
                         href="javascript:void(0)"
                         className="ui-search-btn"
                         ballClassName="ui-sidebar-exception"
-                        icon={uiGridRef.state.icons.search + " ui-search-btn-icon"}
+                        icon={(window.uiGridRef && window.uiGridRef.state.icons.search) + " ui-search-btn-icon"}
                         onClick={() => {
                             this.toggleSidebar();
                             setTimeout(() => {

@@ -1,6 +1,6 @@
 {
     "name": "uisum",
-    "version": "4.6.6",
+    "version": "4.6.9",
     "description": "UI library for/with React",
     "main": "index.js",
     "scripts": {
