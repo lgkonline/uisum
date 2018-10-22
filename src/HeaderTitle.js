@@ -7,7 +7,8 @@ import PropTypes from "prop-types";
 class HeaderTitle extends React.Component {
     static get defaultProps() {
         return {
-            keepAppTitle: false
+            keepAppTitle: false,
+            appRootHref: "#"
         };
     }
 
@@ -16,11 +17,11 @@ class HeaderTitle extends React.Component {
             <h3 className="ui-header-logo">
                 <span className="ui-header-logo-title">
                     {/* Only shows logo when it is set */}
-                    {this.props.logo ? <span><a href="#"><img src={this.props.logo} className="ui-header-logo-image" /></a>&nbsp;</span> : ""}
+                    {this.props.logo ? <span><a href={this.props.appRootHref}><img src={this.props.logo} className="ui-header-logo-image" /></a>&nbsp;</span> : ""}
 
                     {/* If keepAppTitle is set, the title will stay visible even on smaller screens */}
                     <span className={"ui-header-logo-title-labels " + (this.props.keepAppTitle ? "keep" : "")}>
-                        {this.props.appTitle ? <span><a href="#">{this.props.appTitle}</a> {(this.props.children ? "/" : "")}&nbsp;</span> : ""}
+                        {this.props.appTitle ? <span><a href={this.props.appRootHref}>{this.props.appTitle}</a> {(this.props.children ? "/" : "")}&nbsp;</span> : ""}
 
                         {/* Set children as they are */}
                         {this.props.children}
@@ -45,7 +46,12 @@ HeaderTitle.propTypes = {
     /**
      * Deaktiviert, dass der App-Titel bei bestimmer Bildschirmgröße ausgeblendet wird.
      */
-    keepAppTitle: PropTypes.bool
+    keepAppTitle: PropTypes.bool,
+
+    /**
+     * Link for logo and app title
+     */
+    appRootHref: PropTypes.string
 };
 
 export default HeaderTitle;
