@@ -2,43 +2,38 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Single Page Apps for GitHub Pages</title>
-    <script type="text/javascript">
-        // Single Page Apps for GitHub Pages
-        // https://github.com/rafrex/spa-github-pages
-        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
-        // ----------------------------------------------------------------------
-        // This script takes the current url and converts the path and query
-        // string into just a query string, and then redirects the browser
-        // to the new url with only a query string and hash fragment,
-        // e.g. http://www.foo.tld/one/two?a=b&c=d#qwe, becomes
-        // http://www.foo.tld/?p=/one/two&q=a=b~and~c=d#qwe
-        // Note: this 404.html file must be at least 512 bytes for it to work
-        // with Internet Explorer (it is currently > 512 bytes)
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Uisum</title>
 
-        // If you're creating a Project Pages site and NOT using a custom domain,
-        // then set segmentCount to 1 (enterprise users may need to set it to > 1).
-        // This way the code will only replace the route part of the path, and not
-        // the real directory in which the app resides, for example:
-        // https://username.github.io/repo-name/one/two?a=b&c=d#qwe becomes
-        // https://username.github.io/repo-name/?p=/one/two&q=a=b~and~c=d#qwe
-        // Otherwise, leave segmentCount as 0.
-        var segmentCount = 0;
+    <meta property="og:url" content="https://uisum.lgk.io">
+    <meta property="og:title" content="Uisum">
+    <meta property="og:description" content="This UI kit combines Bootstrap and some React components in it to make it easy for you to create new apps.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://uisum.lgk.io/thumbnail.png">
+    <meta property="og:image:secure_url" content="https://uisum.lgk.io/thumbnail.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
-        var l = window.location;
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
-            l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
-            (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash
-        );
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@lgkonline">
+    <meta name="twitter:creator" content="@lgkonline">
+    <meta name="twitter:title" content="Uisum">
+    <meta name="twitter:description" content="This UI kit combines Bootstrap and some React components in it to make it easy for you to create new apps.">
+    <meta name="twitter:image" content="https://uisum.lgk.io/thumbnail.png">
 
-    </script>
+    <link rel="manifest" href="manifest.json?version=4.7.0">
+    <link rel="icon" type="image/png" href="./images/icons/icon-128x128.png?version=4.7.0">
+    <link rel="stylesheet" href="https://lib.lgkonline.com/webfont/stylesheet.min.css?version=4.7.0">
+    <link href="https://lib.lgkonline.com/lgk-icons/style.min.css?version=4.7.0" rel="stylesheet">
+    <link rel="stylesheet" href="/app.css?version=4.7.0">
 </head>
 
 <body>
+    <div id="mount"></div>
+    <script src="/bundle.js?version=4.7.0"></script>
 </body>
 
 </html>
