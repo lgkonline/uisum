@@ -49,10 +49,15 @@
     }
 
     .ui-sidebar-btn-stacked {
+        text-align: center;
         height: auto;
 
         .ui-sidebar-icon {
             display: block;
+        }
+
+        .ui-sidebar-label {
+            font-size: $small-font-size;
         }
     }
 }

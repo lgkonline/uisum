@@ -6591,7 +6591,7 @@ label {
 body {
   overflow: hidden; }
 
-.router-page {
+.page-wrapper {
   /* This is nessesary, because scrolling on iOS devices would not be smooth without it */
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
@@ -6599,7 +6599,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh; }
-  .router-page:not(.active) {
+  .page-wrapper:not(.active) {
     display: none; }
 
 .ui-loading {
@@ -6740,9 +6740,12 @@ body {
       display: flex;
       align-items: center; }
     .ui-grid.open .ui-sidebar-btn-stacked {
+      text-align: center;
       height: auto; }
       .ui-grid.open .ui-sidebar-btn-stacked .ui-sidebar-icon {
         display: block; }
+      .ui-grid.open .ui-sidebar-btn-stacked .ui-sidebar-label {
+        font-size: 80%; }
   .ui-grid:not(.open) .ui-sidebar-visible-on-open {
     display: none; }
   .ui-grid:not(.open) .ui-sidebar-hidden-on-open {
@@ -6945,9 +6948,12 @@ body {
       display: flex;
       align-items: center; }
     .ui-grid.expand-sidebar .ui-sidebar-btn-stacked {
+      text-align: center;
       height: auto; }
       .ui-grid.expand-sidebar .ui-sidebar-btn-stacked .ui-sidebar-icon {
         display: block; }
+      .ui-grid.expand-sidebar .ui-sidebar-btn-stacked .ui-sidebar-label {
+        font-size: 80%; }
     .ui-grid.expand-sidebar .ui-sidebar {
       box-shadow: none !important;
       background: transparent; }
@@ -7450,11 +7456,11 @@ body {
     display: block !important; }
   .ui-tabs .ui-sidebar-label {
     display: initial !important; }
-  .ui-tabs:not(.d-sm-none) ~ .router-page {
+  .ui-tabs:not(.d-sm-none) ~ .page-wrapper {
     height: calc(100vh - 68px); }
 
 @media screen and (max-width: 576px) {
-  .ui-tabs.d-sm-none ~ .router-page {
+  .ui-tabs.d-sm-none ~ .page-wrapper {
     height: calc(100vh - 68px); } }
 
 .document-view-iframe {

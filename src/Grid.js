@@ -33,12 +33,14 @@ if (typeof Object.assign != 'function') {
 /** */
 
 import React from "react";
-import SidebarMenu from "./SidebarMenu.js";
-import Utilities from "./Utilities.js";
 import PropTypes from "prop-types";
 
+import SidebarMenu from "./SidebarMenu.js";
+import Utilities from "./Utilities.js";
+import PageWrapper from "./PageWrapper.js";
+
 // Damit Events auch in IE funktionieren
-require("custom-event-polyfill/custom-event-polyfill.js");
+require("custom-event-polyfill");
 
 window.toggleSidebarEvent = new CustomEvent("toggleSidebar");
 
@@ -278,14 +280,15 @@ class Grid extends React.Component {
 
                     {this.props.pages.map(page =>
                         this.state.history.indexOf(page.name) > -1 &&
-                        <div
+                        <PageWrapper
                             key={page.name}
-                            className={"router-page " + this.props.routerPageClass + " " + (this.state.match[0] == page.name ? "active" : "")}
+                            className={this.props.routerPageClass}
+                            active={this.state.match[0] == page.name}
                         >
                             {page.component}
 
                             {this.props.footer}
-                        </div>
+                        </PageWrapper>
                     )}
 
                     <div className="ui-status-circle ui-loading ui-status-loading">
@@ -381,7 +384,7 @@ Grid.propTypes = {
     footer: PropTypes.any,
 
     /**
-     * Extends <code>className</code> of <code>.router-page</code>.
+     * Extends <code>className</code> of <code>.page-wrapper</code>.
      */
     routerPageClass: PropTypes.string
 };

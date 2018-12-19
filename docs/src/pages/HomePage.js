@@ -1,12 +1,13 @@
 import React from "react";
-import { Page, Body, Header, HeaderTitle, ActionMenu, ActionMenuItem, Search, FluentBtn, Utilities } from "../../../index.dev.js";
+import { Link } from "react-router-dom";
+import { Page, Body, Header, HeaderTitle, FluentBtn } from "../../../index.dev.js";
 
 class HomePage extends React.Component {
     render() {
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle}>
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
                         Start
                     </HeaderTitle>
                 </Header>

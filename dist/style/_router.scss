@@ -2,7 +2,7 @@ body {
     overflow: hidden;
 }
 
-.router-page {
+.page-wrapper {
     /* This is nessesary, because scrolling on iOS devices would not be smooth without it */
     -webkit-overflow-scrolling: touch;
 

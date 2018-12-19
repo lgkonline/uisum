@@ -1,5 +1,6 @@
 import React from "react";
-import { Page, Body, Header, HeaderTitle, ActionMenu, ActionMenuItem, Utilities } from "../../../index.dev.js";
+import { Link } from "react-router-dom";
+import { Page, Body, Header, HeaderTitle, Utilities } from "../../../index.dev.js";
 
 import doc from "../data/doc.json";
 import docDoc from "../data/doc-doc.json";
@@ -12,14 +13,16 @@ class SearchResultsPage extends React.Component {
             searchWord: "",
             results: null
         };
+    }
 
-        window.addEventListener("hashchange", event => {
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.searchWord !== this.props.match.params.searchWord) {
             this.componentWillMount();
-        });
+        }
     }
 
     componentWillMount() {
-        this.setState({ searchWord: uiGridRef.state.match[1] }, () => {
+        this.setState({ searchWord: this.props.match.params.searchWord }, () => {
             this.search(this.state.searchWord);
         });
     }
@@ -61,7 +64,7 @@ class SearchResultsPage extends React.Component {
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle}>
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
                         {t("SEARCH2")}: "{this.state.searchWord}"
                     </HeaderTitle>
                 </Header>
@@ -71,10 +74,10 @@ class SearchResultsPage extends React.Component {
                         <div>
                             <div className="list-group" style={{ marginTop: "2rem" }}>
                                 {this.state.results.map((r, i) =>
-                                    <a
+                                    <Link
                                         key={i}
                                         className="list-group-item list-group-item-action fluent-btn light"
-                                        href={"#" + r.to}
+                                        to={r.to}
                                     >
                                         <div className="fluent-btn-ball" />
                                         <h4 className="list-group-item-heading">{r.title}</h4>
@@ -84,7 +87,7 @@ class SearchResultsPage extends React.Component {
                                                 __html: r.description
                                             }}
                                         />
-                                    </a>
+                                    </Link>
                                 )}
                             </div>
 

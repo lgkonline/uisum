@@ -171,7 +171,7 @@ So you can also use classes like .text-theme and .bg-theme.
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle}>
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
                         {t("GETTING_STARTED")}
                     </HeaderTitle>
                 </Header>

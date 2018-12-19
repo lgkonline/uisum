@@ -1,7 +1,7 @@
 import React from "react";
-import Highlight from "react-highlight";
+import { Link } from "react-router-dom";
 
-import { Page, Body, Header, HeaderTitle, MenuItem, Utilities, FluentBtn, ActionMenu, ActionMenuItem } from "../../../index.dev.js";
+import { Page, Body, Header, HeaderTitle } from "../../../index.dev.js";
 import doc from "../data/doc.json";
 
 import ReactComponent from "../components/ReactComponent";
@@ -21,19 +21,15 @@ class ReactComponentPage extends React.Component {
         }
     }
 
-    componentWillMount() {
-        uiGridRef.addEventListener("componentDidUpdate", (prevProps, prevState) => {
-            if (prevState.hash != uiGridRef.state.hash &&
-                uiGridRef.state.match[0] == "react-component" && uiGridRef.state.hash != this.state.hash) {
-
-                this.componentDidMount();
-            }
-        });
+    componentDidUpdate(prevProps) {
+        if (prevProps.match.params.component !== this.props.match.params.component) {
+            this.componentDidMount();
+        }
     }
 
     componentDidMount() {
-        if (uiGridRef.state.match[1] && uiGridRef.state.match[1] != "") {
-            this.setState({ selectedComponent: uiGridRef.state.match[1] });
+        if (this.props.match.params.component && this.props.match.params.component != "") {
+            this.setState({ selectedComponent: this.props.match.params.component });
         }
         else {
             this.setState({ selectedComponent: null });
@@ -49,8 +45,8 @@ class ReactComponentPage extends React.Component {
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle}>
-                        {this.state.selectedComponent ? <a href="#/react-component">{t("REACT_COMPONENTS")}</a> : t("REACT_COMPONENTS")}
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
+                        {this.state.selectedComponent ? <Link to="/react-component">{t("REACT_COMPONENTS")}</Link> : t("REACT_COMPONENTS")}
                         {this.state.selectedComponent &&
                             <span> / {this.state.selectedComponent}</span>
                         }

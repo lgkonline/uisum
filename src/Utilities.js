@@ -120,7 +120,7 @@ let Utilities = {
     },
 
     scrollToTop: () => {
-        const routerPage = document.querySelector(".router-page.active");
+        const routerPage = document.querySelector(".page-wrapper.active");
 
         routerPage.scroll({
             behavior: "smooth",

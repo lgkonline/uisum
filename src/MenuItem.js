@@ -79,7 +79,7 @@ class MenuItem extends React.Component {
                     {...props}
                     className={className +
                         (this.props.isActive || this.state.active ? " active" : "") +
-                        (this.props.stacked ? " text-center ui-sidebar-btn-stacked" : "")
+                        (this.props.stacked ? " ui-sidebar-btn-stacked" : "")
                     }
                     onClick={event => this.onClick(event)}
                 >
@@ -91,7 +91,7 @@ class MenuItem extends React.Component {
                         />
                     }
                     <span className={icon + " ui-sidebar-icon"}></span>
-                    {" "}<span className={"ui-sidebar-label" + (this.props.stacked ? " small" : "")}>{this.props.label}</span>
+                    {" "}<span className="ui-sidebar-label">{this.props.label}</span>
                 </a>
                 {this.state.showDropdown &&
                     <div className={"ui-sidebar-dropdown " + this.props.dropdownClassName}>

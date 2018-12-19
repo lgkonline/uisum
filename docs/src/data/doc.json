@@ -301,166 +301,6 @@
         },
         "exampleCode": "import React from \"react\";\r\nimport { FluentBtn, Utilities } from \"uisum\";\r\n\r\nclass FluentBtnExample extends React.Component {\r\n    componentDidMount() {\r\n        // On normal usage inside of <Page /> the following isn't necessary. You only need it when <FluentBtn /> gets embedded async.\r\n        Utilities.registerFluentBtns();\r\n    }\r\n\r\n    render() {\r\n        return (\r\n            <div>\r\n                <FluentBtn\r\n                    className=\"btn btn-primary btn-lg\"\r\n                >\r\n                    Hover over this button and see the fancy fluent effect\r\n                </FluentBtn>\r\n            </div>\r\n        );\r\n    }\r\n}\r\n\r\nexport default FluentBtnExample;"
     },
-    "src\\Grid.WithLocalStorage.js": {
-        "description": "Das Grundgerüst von  App. Objekt wird über window.uiGridRef global ansprechbar sein.<br>\r\nAußerdem kann über <code>uiGridRef.addEventListener(eventName, (prevProps, prevState) => { })</code> ein Event-Listener angefügt werden.\r\n<br><br>\r\n<h3 class=\"mt-4 mb-3\">Allowed event listeners</h3>\r\n<table class=\"table\">\r\n<thead><tr><th>Event name</th><th>Description</th><th>Example</th></tr></thead>\r\n<tbody>\r\n<tr>\r\n<th>componentDidUpdate</th>\r\n<td>Komponente wurde aktualisiert.</td>\r\n<td><code>uiGridRef.addEventListener(\"componentDidUpdate\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n\r\n<tr>\r\n<th>pageDidShowAgain</th>\r\n<td>Seite wurde erneut angezeigt, mit altem Stand. Im Callback kann Komponente neu initialisiert werden.</td>\r\n<td><code>uiGridRef.addEventListener(\"pageDidShowAgain\", \"home\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n\r\n<tr>\r\n<th>pageDidHide</th>\r\n<td>Seite wurde versteckt (andere Seite wurde angezeigt).</td>\r\n<td><code>uiGridRef.addEventListener(\"pageDidHide\", \"home\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n</tbody>\r\n</table>",
-        "displayName": "Grid",
-        "methods": [
-            {
-                "name": "defaultProps",
-                "docblock": null,
-                "modifiers": [
-                    "static"
-                ],
-                "params": [],
-                "returns": null
-            },
-            {
-                "name": "setLocalStorageState",
-                "docblock": null,
-                "modifiers": [],
-                "params": [
-                    {
-                        "name": "stateName",
-                        "type": null
-                    }
-                ],
-                "returns": null
-            },
-            {
-                "name": "setLocalStorageStates",
-                "docblock": null,
-                "modifiers": [],
-                "params": [],
-                "returns": null
-            },
-            {
-                "name": "toggleSidebar",
-                "docblock": null,
-                "modifiers": [],
-                "params": [
-                    {
-                        "name": "event",
-                        "type": null
-                    }
-                ],
-                "returns": null
-            },
-            {
-                "name": "hideSidebar",
-                "docblock": null,
-                "modifiers": [],
-                "params": [
-                    {
-                        "name": "e",
-                        "type": null
-                    }
-                ],
-                "returns": null
-            },
-            {
-                "name": "initMatch",
-                "docblock": null,
-                "modifiers": [],
-                "params": [],
-                "returns": null
-            },
-            {
-                "name": "addEventListener",
-                "docblock": null,
-                "modifiers": [],
-                "params": [
-                    {
-                        "name": "param1",
-                        "type": null
-                    },
-                    {
-                        "name": "param2",
-                        "type": null
-                    },
-                    {
-                        "name": "param3",
-                        "type": null
-                    }
-                ],
-                "returns": null
-            }
-        ],
-        "props": {
-            "expandSidebar": {
-                "type": {
-                    "name": "bool"
-                },
-                "required": false,
-                "description": "The sidebar will be expanded on full view.<br>\r\nDie Sidebar ist bei Vollbild automatisch erweitert.",
-                "defaultValue": {
-                    "value": "false",
-                    "computed": false
-                }
-            },
-            "expandSidebarToggleable": {
-                "type": {
-                    "name": "bool"
-                },
-                "required": false,
-                "description": "Makes the expanded sidebar toggleable using the menu icon button. <code>expandSidebar</code> has to be <code>true</code> for this to take effect.",
-                "defaultValue": {
-                    "value": "false",
-                    "computed": false
-                }
-            },
-            "hideSidebarMenu": {
-                "type": {
-                    "name": "bool"
-                },
-                "required": false,
-                "description": "Disables the sidebar.\r\nDeaktiviert die Sidebar.",
-                "defaultValue": {
-                    "value": "false",
-                    "computed": false
-                }
-            },
-            "pages": {
-                "type": {
-                    "name": "array"
-                },
-                "required": false,
-                "description": "Registers pages.<br>\r\nRegistriert Seiten.<br>\r\nExample: [{name: \"home\", component: <HomePage />}]",
-                "defaultValue": {
-                    "value": "[]",
-                    "computed": false
-                }
-            },
-            "icons": {
-                "type": {
-                    "name": "object"
-                },
-                "required": false,
-                "description": "Let's you define the default icons.<br>\r\nLässt dich die Standard-Icons definieren.<br>\r\n<strong>Example:</strong><br><code>{<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"search\": \"fas fa-search\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"actionMenu\": \"fas fa-ellipsis-v \",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"menu\": \"fas fa-bars\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"success\": \"fas fa-check\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"info\": \"fas fa-info\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"warning\": \"fas fa-exclamation-triangle\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"danger\": \"fas fa-times\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"cancel\": \"fas fa-times\"<br>\r\n                }</code><br>",
-                "defaultValue": {
-                    "value": "this.defaultIcons",
-                    "computed": true
-                }
-            },
-            "footer": {
-                "type": {
-                    "name": "any"
-                },
-                "required": false,
-                "description": "You can set a footer element that always be at the bottom of the app.<br>\r\nDu kannst ein Footer-Element setzen, das immer am Ende der App angezeigt wird.<br>\r\n<strong>Example:</strong><br><code>(<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;footer className=\"bg-white ml-sidebar-width p-3 text-center\"&gt;<br>\r\n                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a footer<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;<br>\r\n                )</code><br>"
-            },
-            "routerPageClass": {
-                "type": {
-                    "name": "string"
-                },
-                "required": false,
-                "description": "Extends <code>className</code> of <code>.router-page</code>.",
-                "defaultValue": {
-                    "value": "\"\"",
-                    "computed": false
-                }
-            }
-        }
-    },
     "src\\Grid.js": {
         "description": "Das Grundgerüst von  App. Objekt wird über window.uiGridRef global ansprechbar sein.<br>\r\nAußerdem kann über <code>uiGridRef.addEventListener(eventName, (prevProps, prevState) => { })</code> ein Event-Listener angefügt werden.\r\n<br><br>\r\n<h3 class=\"mt-4 mb-3\">Allowed event listeners</h3>\r\n<table class=\"table\">\r\n<thead><tr><th>Event name</th><th>Description</th><th>Example</th></tr></thead>\r\n<tbody>\r\n<tr>\r\n<th>componentDidUpdate</th>\r\n<td>Komponente wurde aktualisiert.</td>\r\n<td><code>uiGridRef.addEventListener(\"componentDidUpdate\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n\r\n<tr>\r\n<th>pageDidShowAgain</th>\r\n<td>Seite wurde erneut angezeigt, mit altem Stand. Im Callback kann Komponente neu initialisiert werden.</td>\r\n<td><code>uiGridRef.addEventListener(\"pageDidShowAgain\", \"home\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n\r\n<tr>\r\n<th>pageDidHide</th>\r\n<td>Seite wurde versteckt (andere Seite wurde angezeigt).</td>\r\n<td><code>uiGridRef.addEventListener(\"pageDidHide\", \"home\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n</tbody>\r\n</table>",
         "displayName": "Grid",
@@ -594,7 +434,7 @@
                     "name": "string"
                 },
                 "required": false,
-                "description": "Extends <code>className</code> of <code>.router-page</code>.",
+                "description": "Extends <code>className</code> of <code>.page-wrapper</code>.",
                 "defaultValue": {
                     "value": "\"\"",
                     "computed": false
@@ -889,6 +729,52 @@
         "description": "",
         "displayName": "Page",
         "methods": []
+    },
+    "src\\PageWrapper.js": {
+        "description": "",
+        "displayName": "PageWrapper",
+        "methods": [
+            {
+                "name": "defaultProps",
+                "docblock": null,
+                "modifiers": [
+                    "static"
+                ],
+                "params": [],
+                "returns": null
+            }
+        ],
+        "props": {
+            "children": {
+                "type": {
+                    "name": "any"
+                },
+                "required": false,
+                "description": ""
+            },
+            "active": {
+                "type": {
+                    "name": "bool"
+                },
+                "required": false,
+                "description": "",
+                "defaultValue": {
+                    "value": "true",
+                    "computed": false
+                }
+            },
+            "className": {
+                "type": {
+                    "name": "string"
+                },
+                "required": false,
+                "description": "",
+                "defaultValue": {
+                    "value": "\"\"",
+                    "computed": false
+                }
+            }
+        }
     },
     "src\\Search.js": {
         "description": "Eine Suchleiste, die zur Seitenleiste hinzugefügt werden kann.",

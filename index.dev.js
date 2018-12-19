@@ -16,3 +16,4 @@ exports.Switch = require("./src/Switch.js")["default"];
 exports.Tabs = require("./src/Tabs.js")["default"];
 exports.Caret = require("./src/Caret.js")["default"];
 exports.Utilities = require("./src/Utilities.js")["default"];
+exports.PageWrapper = require("./src/PageWrapper.js")["default"];

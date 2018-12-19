@@ -40,14 +40,14 @@
         display: initial !important;
     }
 
-    // Adds padding-bottom to all .router-page's that come after .ui-tabs
-    &:not(.d-sm-none) ~ .router-page {
+    // Adds padding-bottom to all .page-wrapper's that come after .ui-tabs
+    &:not(.d-sm-none) ~ .page-wrapper {
         height: calc(100vh - #{$tabs-height});
     }
 }
 
 @media screen and (max-width: map-get($map: $grid-breakpoints, $key: sm)) {
-    .ui-tabs.d-sm-none ~ .router-page {
+    .ui-tabs.d-sm-none ~ .page-wrapper {
         height: calc(100vh - #{$tabs-height});
     }
 }

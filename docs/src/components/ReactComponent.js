@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Highlight from "react-highlight";
+import { Link } from "react-router-dom";
 
 class ReactComponent extends React.Component {
     constructor() {
@@ -27,7 +28,7 @@ class ReactComponent extends React.Component {
         return (
             <article>
                 <h2 className="page-header">
-                    <a href={"#/react-component/" + this.props.comp.displayName}>#</a> {this.props.comp.displayName}
+                    <Link to={"/react-component/" + this.props.comp.displayName}>#</Link> {this.props.comp.displayName}
                 </h2>
 
                 <div
@@ -120,7 +121,7 @@ class ReactComponent extends React.Component {
                                         }
                                     </div>
                                     :
-                                    <a href={"#/react-component/" + this.props.comp.displayName}>{t("SHOW_EXAMPLE")}</a>
+                                    <Link to={"/react-component/" + this.props.comp.displayName}>{t("SHOW_EXAMPLE")}</Link>
                             )
                         }
                     </div>
