@@ -34,11 +34,9 @@ $font-family-sans-serif: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe
 
 .lgk-logo {
     a {
-        color: $gray-200;
-        transition: color .4s;
+        color: #fac8a1;
 
         &:hover {
-            color: orange;
             text-decoration: none;
         }
     }

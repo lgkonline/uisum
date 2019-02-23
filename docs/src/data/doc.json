@@ -1,5 +1,5 @@
 {
-    "src\\ActionMenu.js": {
+    "src/ActionMenu.js": {
         "description": "Das Action-Menü an der oberen rechten Ecke einer Seite. Hier können Aktionen platziert werden, die im Kontext der aktuellen Seite stehen.",
         "displayName": "ActionMenu",
         "methods": [
@@ -33,7 +33,7 @@
                     "name": "bool"
                 },
                 "required": false,
-                "description": "Versteckt die drei Punkte in mobiler Ansicht.\r\nDas kann nützlich sein, wenn mehrere ActionMenus genutzt werden, aber nicht überall der Toggle angezeigt werden soll.",
+                "description": "Versteckt die drei Punkte in mobiler Ansicht.\nDas kann nützlich sein, wenn mehrere ActionMenus genutzt werden, aber nicht überall der Toggle angezeigt werden soll.",
                 "defaultValue": {
                     "value": "false",
                     "computed": false
@@ -41,7 +41,7 @@
             }
         }
     },
-    "src\\ActionMenuItem.js": {
+    "src/ActionMenuItem.js": {
         "description": "List-Item und Link für das Action-Menü.",
         "displayName": "ActionMenuItem",
         "methods": [
@@ -94,7 +94,7 @@
             }
         }
     },
-    "src\\ActionMenuSwitch.js": {
+    "src/ActionMenuSwitch.js": {
         "description": "Switch für das Action-Menü.",
         "displayName": "ActionMenuSwitch",
         "methods": [
@@ -150,7 +150,7 @@
             }
         }
     },
-    "src\\Body.js": {
+    "src/Body.js": {
         "description": "Enthält den Inhalt einer Seite.",
         "displayName": "Body",
         "methods": [
@@ -196,7 +196,7 @@
             }
         }
     },
-    "src\\Caret.js": {
+    "src/Caret.js": {
         "description": "Caret icon component.",
         "displayName": "Caret",
         "methods": [
@@ -245,10 +245,10 @@
                 }
             }
         },
-        "exampleCode": "import React from \"react\";\r\nimport { Caret } from \"uisum\";\r\n\r\nclass CaretExample extends React.Component {\r\n    constructor() {\r\n        super();\r\n\r\n        this.state = {\r\n            isOpen: false\r\n        };\r\n    }\r\n\r\n    render() {\r\n        return (\r\n            <div>\r\n                <button\r\n                    className=\"btn btn-secondary\"\r\n                    onClick={() => this.setState({ isOpen: !this.state.isOpen })}\r\n                >\r\n                    <Caret\r\n                        open={this.state.isOpen}\r\n                    />\r\n                    {\" \"}<span>See what happens when you click here</span>\r\n                </button>\r\n                {this.state.isOpen &&\r\n                    <div className=\"bg-dark text-white p-2 my-2\">\r\n                        This is visible now!\r\n                    </div>\r\n                }\r\n            </div>\r\n        );\r\n    }\r\n}\r\n\r\nexport default CaretExample;"
+        "exampleCode": "import React from \"react\";\nimport { Caret } from \"uisum\";\n\nclass CaretExample extends React.Component {\n    constructor() {\n        super();\n\n        this.state = {\n            isOpen: false\n        };\n    }\n\n    render() {\n        return (\n            <div>\n                <button\n                    className=\"btn btn-secondary\"\n                    onClick={() => this.setState({ isOpen: !this.state.isOpen })}\n                >\n                    <Caret\n                        open={this.state.isOpen}\n                    />\n                    {\" \"}<span>See what happens when you click here</span>\n                </button>\n                {this.state.isOpen &&\n                    <div className=\"bg-dark text-white p-2 my-2\">\n                        This is visible now!\n                    </div>\n                }\n            </div>\n        );\n    }\n}\n\nexport default CaretExample;"
     },
-    "src\\FluentBtn.js": {
-        "description": "Shortcut für <code>&lt;button class=\"fluent-btn\"&gt;&lt;div className=\"fluent-btn-ball\"&gt;&lt;/div&gt;&lt;/button&gt;</code>.\r\nErzeugt Button, mit einem Acrylic-Effekt.",
+    "src/FluentBtn.js": {
+        "description": "Shortcut für <code>&lt;button class=\"fluent-btn\"&gt;&lt;div className=\"fluent-btn-ball\"&gt;&lt;/div&gt;&lt;/button&gt;</code>.\nErzeugt Button, mit einem Acrylic-Effekt.",
         "displayName": "FluentBtn",
         "methods": [
             {
@@ -299,10 +299,10 @@
                 }
             }
         },
-        "exampleCode": "import React from \"react\";\r\nimport { FluentBtn, Utilities } from \"uisum\";\r\n\r\nclass FluentBtnExample extends React.Component {\r\n    componentDidMount() {\r\n        // On normal usage inside of <Page /> the following isn't necessary. You only need it when <FluentBtn /> gets embedded async.\r\n        Utilities.registerFluentBtns();\r\n    }\r\n\r\n    render() {\r\n        return (\r\n            <div>\r\n                <FluentBtn\r\n                    className=\"btn btn-primary btn-lg\"\r\n                >\r\n                    Hover over this button and see the fancy fluent effect\r\n                </FluentBtn>\r\n            </div>\r\n        );\r\n    }\r\n}\r\n\r\nexport default FluentBtnExample;"
+        "exampleCode": "import React from \"react\";\nimport { FluentBtn, Utilities } from \"uisum\";\n\nclass FluentBtnExample extends React.Component {\n    componentDidMount() {\n        // On normal usage inside of <Page /> the following isn't necessary. You only need it when <FluentBtn /> gets embedded async.\n        Utilities.registerFluentBtns();\n    }\n\n    render() {\n        return (\n            <div>\n                <FluentBtn\n                    className=\"btn btn-primary btn-lg\"\n                >\n                    Hover over this button and see the fancy fluent effect\n                </FluentBtn>\n            </div>\n        );\n    }\n}\n\nexport default FluentBtnExample;"
     },
-    "src\\Grid.js": {
-        "description": "Das Grundgerüst von  App. Objekt wird über window.uiGridRef global ansprechbar sein.<br>\r\nAußerdem kann über <code>uiGridRef.addEventListener(eventName, (prevProps, prevState) => { })</code> ein Event-Listener angefügt werden.\r\n<br><br>\r\n<h3 class=\"mt-4 mb-3\">Allowed event listeners</h3>\r\n<table class=\"table\">\r\n<thead><tr><th>Event name</th><th>Description</th><th>Example</th></tr></thead>\r\n<tbody>\r\n<tr>\r\n<th>componentDidUpdate</th>\r\n<td>Komponente wurde aktualisiert.</td>\r\n<td><code>uiGridRef.addEventListener(\"componentDidUpdate\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n\r\n<tr>\r\n<th>pageDidShowAgain</th>\r\n<td>Seite wurde erneut angezeigt, mit altem Stand. Im Callback kann Komponente neu initialisiert werden.</td>\r\n<td><code>uiGridRef.addEventListener(\"pageDidShowAgain\", \"home\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n\r\n<tr>\r\n<th>pageDidHide</th>\r\n<td>Seite wurde versteckt (andere Seite wurde angezeigt).</td>\r\n<td><code>uiGridRef.addEventListener(\"pageDidHide\", \"home\", (prevProps, prevState) => { })</code></td>\r\n</tr>\r\n</tbody>\r\n</table>",
+    "src/Grid.js": {
+        "description": "Das Grundgerüst von  App. Objekt wird über window.uiGridRef global ansprechbar sein.<br>\nAußerdem kann über <code>uiGridRef.addEventListener(eventName, (prevProps, prevState) => { })</code> ein Event-Listener angefügt werden.\n<br><br>\n<h3 class=\"mt-4 mb-3\">Allowed event listeners</h3>\n<table class=\"table\">\n<thead><tr><th>Event name</th><th>Description</th><th>Example</th></tr></thead>\n<tbody>\n<tr>\n<th>componentDidUpdate</th>\n<td>Komponente wurde aktualisiert.</td>\n<td><code>uiGridRef.addEventListener(\"componentDidUpdate\", (prevProps, prevState) => { })</code></td>\n</tr>\n\n<tr>\n<th>pageDidShowAgain</th>\n<td>Seite wurde erneut angezeigt, mit altem Stand. Im Callback kann Komponente neu initialisiert werden.</td>\n<td><code>uiGridRef.addEventListener(\"pageDidShowAgain\", \"home\", (prevProps, prevState) => { })</code></td>\n</tr>\n\n<tr>\n<th>pageDidHide</th>\n<td>Seite wurde versteckt (andere Seite wurde angezeigt).</td>\n<td><code>uiGridRef.addEventListener(\"pageDidHide\", \"home\", (prevProps, prevState) => { })</code></td>\n</tr>\n</tbody>\n</table>",
         "displayName": "Grid",
         "methods": [
             {
@@ -372,7 +372,7 @@
                     "name": "bool"
                 },
                 "required": false,
-                "description": "The sidebar will be expanded on full view.<br>\r\nDie Sidebar ist bei Vollbild automatisch erweitert.",
+                "description": "The sidebar will be expanded on full view.<br>\nDie Sidebar ist bei Vollbild automatisch erweitert.",
                 "defaultValue": {
                     "value": "false",
                     "computed": false
@@ -394,7 +394,7 @@
                     "name": "bool"
                 },
                 "required": false,
-                "description": "Disables the sidebar.\r\nDeaktiviert die Sidebar.",
+                "description": "Disables the sidebar.\nDeaktiviert die Sidebar.",
                 "defaultValue": {
                     "value": "false",
                     "computed": false
@@ -405,7 +405,7 @@
                     "name": "array"
                 },
                 "required": false,
-                "description": "Registers pages.<br>\r\nRegistriert Seiten.<br>\r\nExample: [{name: \"home\", component: <HomePage />}]",
+                "description": "Registers pages.<br>\nRegistriert Seiten.<br>\nExample: [{name: \"home\", component: <HomePage />}]",
                 "defaultValue": {
                     "value": "[]",
                     "computed": false
@@ -416,7 +416,7 @@
                     "name": "object"
                 },
                 "required": false,
-                "description": "Let's you define the default icons.<br>\r\nLässt dich die Standard-Icons definieren.<br>\r\n<strong>Example:</strong><br><code>{<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"search\": \"fas fa-search\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"actionMenu\": \"fas fa-ellipsis-v \",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"menu\": \"fas fa-bars\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"success\": \"fas fa-check\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"info\": \"fas fa-info\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"warning\": \"fas fa-exclamation-triangle\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"danger\": \"fas fa-times\",<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"cancel\": \"fas fa-times\"<br>\r\n                }</code><br>",
+                "description": "Let's you define the default icons.<br>\nLässt dich die Standard-Icons definieren.<br>\n<strong>Example:</strong><br><code>{<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"search\": \"fas fa-search\",<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"actionMenu\": \"fas fa-ellipsis-v \",<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"menu\": \"fas fa-bars\",<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"success\": \"fas fa-check\",<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"info\": \"fas fa-info\",<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"warning\": \"fas fa-exclamation-triangle\",<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"danger\": \"fas fa-times\",<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;\"cancel\": \"fas fa-times\"<br>\n                }</code><br>",
                 "defaultValue": {
                     "value": "this.defaultIcons",
                     "computed": true
@@ -427,7 +427,7 @@
                     "name": "any"
                 },
                 "required": false,
-                "description": "You can set a footer element that always be at the bottom of the app.<br>\r\nDu kannst ein Footer-Element setzen, das immer am Ende der App angezeigt wird.<br>\r\n<strong>Example:</strong><br><code>(<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;footer className=\"bg-white ml-sidebar-width p-3 text-center\"&gt;<br>\r\n                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a footer<br>\r\n                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;<br>\r\n                )</code><br>"
+                "description": "You can set a footer element that always be at the bottom of the app.<br>\nDu kannst ein Footer-Element setzen, das immer am Ende der App angezeigt wird.<br>\n<strong>Example:</strong><br><code>(<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;footer className=\"bg-white ml-sidebar-width p-3 text-center\"&gt;<br>\n                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It's a footer<br>\n                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;<br>\n                )</code><br>"
             },
             "routerPageClass": {
                 "type": {
@@ -442,12 +442,12 @@
             }
         }
     },
-    "src\\Header.js": {
+    "src/Header.js": {
         "description": "",
         "displayName": "Header",
         "methods": []
     },
-    "src\\HeaderActions.js": {
+    "src/HeaderActions.js": {
         "description": "Hier werden z.B. Buttons für die aktuelle Seite platziert.",
         "displayName": "HeaderActions",
         "methods": [
@@ -486,7 +486,7 @@
             }
         }
     },
-    "src\\HeaderTitle.js": {
+    "src/HeaderTitle.js": {
         "description": "Der Titel-Bereich in der Kopf-Leiste.",
         "displayName": "HeaderTitle",
         "methods": [
@@ -539,7 +539,7 @@
             }
         }
     },
-    "src\\Intro.js": {
+    "src/Intro.js": {
         "description": "Geeignet als Login-Bildschirm.",
         "displayName": "Intro",
         "methods": [
@@ -599,7 +599,7 @@
             }
         }
     },
-    "src\\MenuItem.js": {
+    "src/MenuItem.js": {
         "description": "List-Item und Link für die Sidebar.",
         "displayName": "MenuItem",
         "methods": [
@@ -725,12 +725,12 @@
             }
         }
     },
-    "src\\Page.js": {
+    "src/Page.js": {
         "description": "",
         "displayName": "Page",
         "methods": []
     },
-    "src\\PageWrapper.js": {
+    "src/PageWrapper.js": {
         "description": "",
         "displayName": "PageWrapper",
         "methods": [
@@ -776,7 +776,7 @@
             }
         }
     },
-    "src\\Search.js": {
+    "src/Search.js": {
         "description": "Eine Suchleiste, die zur Seitenleiste hinzugefügt werden kann.",
         "displayName": "Search",
         "methods": [
@@ -909,9 +909,9 @@
                 }
             }
         },
-        "exampleCode": "import React from \"react\";\r\nimport { Search } from \"uisum\";\r\n\r\nclass SearchExample extends React.Component {\r\n    constructor() {\r\n        super();\r\n\r\n        this.state = {\r\n            search: \"\"\r\n        };\r\n    }\r\n\r\n    render() {\r\n        return (\r\n            <div>\r\n                <Search\r\n                    body\r\n                    reset\r\n                    value={this.state.search}\r\n                    onChange={({ target }) => this.setState({ search: target.value })}\r\n                    onSubmit={() => alert(\"Do form submit now!\")}\r\n                    placeholder=\"Begin typing...\"\r\n                />\r\n            </div>\r\n        );\r\n    }\r\n}\r\n\r\nexport default SearchExample;"
+        "exampleCode": "import React from \"react\";\nimport { Search } from \"uisum\";\n\nclass SearchExample extends React.Component {\n    constructor() {\n        super();\n\n        this.state = {\n            search: \"\"\n        };\n    }\n\n    render() {\n        return (\n            <div>\n                <Search\n                    body\n                    reset\n                    value={this.state.search}\n                    onChange={({ target }) => this.setState({ search: target.value })}\n                    onSubmit={() => alert(\"Do form submit now!\")}\n                    placeholder=\"Begin typing...\"\n                />\n            </div>\n        );\n    }\n}\n\nexport default SearchExample;"
     },
-    "src\\SidebarMenu.js": {
+    "src/SidebarMenu.js": {
         "description": "Die Seitenleiste für das Grid.",
         "displayName": "SidebarMenu",
         "methods": [],
@@ -953,7 +953,7 @@
             }
         }
     },
-    "src\\Switch.js": {
+    "src/Switch.js": {
         "description": "Switch.",
         "displayName": "Switch",
         "methods": [
@@ -1035,9 +1035,9 @@
                 }
             }
         },
-        "exampleCode": "import React from \"react\";\r\nimport { Switch } from \"uisum\";\r\n\r\nclass SwitchExample extends React.Component {\r\n    constructor() {\r\n        super();\r\n\r\n        this.state = {\r\n            isChecked: true\r\n        };\r\n    }\r\n\r\n    render() {\r\n        return (\r\n            <div className=\"row\">\r\n                <div className=\"col-md-6\">\r\n                    <h4>Normal switch</h4>\r\n\r\n                    <Switch\r\n                        checked={this.state.isChecked}\r\n                        onChange={() => this.setState({ isChecked: !this.state.isChecked })}\r\n                    />\r\n                </div>\r\n\r\n                <div className=\"col-md-6\">\r\n                    <h4>Switch with a slider label</h4>\r\n\r\n                    <Switch\r\n                        className=\"lg\"\r\n                        checked={this.state.isChecked}\r\n                        onChange={() => this.setState({ isChecked: !this.state.isChecked })}\r\n                        sliderLabel={this.state.isChecked ? \"🎉\" : \"😒\"}\r\n                    />\r\n                </div>\r\n            </div>\r\n        );\r\n    }\r\n}\r\n\r\nexport default SwitchExample;"
+        "exampleCode": "import React from \"react\";\nimport { Switch } from \"uisum\";\n\nclass SwitchExample extends React.Component {\n    constructor() {\n        super();\n\n        this.state = {\n            isChecked: true\n        };\n    }\n\n    render() {\n        return (\n            <div className=\"row\">\n                <div className=\"col-md-6\">\n                    <h4>Normal switch</h4>\n\n                    <Switch\n                        checked={this.state.isChecked}\n                        onChange={() => this.setState({ isChecked: !this.state.isChecked })}\n                    />\n                </div>\n\n                <div className=\"col-md-6\">\n                    <h4>Switch with a slider label</h4>\n\n                    <Switch\n                        className=\"lg\"\n                        checked={this.state.isChecked}\n                        onChange={() => this.setState({ isChecked: !this.state.isChecked })}\n                        sliderLabel={this.state.isChecked ? \"🎉\" : \"😒\"}\n                    />\n                </div>\n            </div>\n        );\n    }\n}\n\nexport default SwitchExample;"
     },
-    "src\\Tabs.js": {
+    "src/Tabs.js": {
         "description": "Shows tab bar on the bottom side. Can be filled with <code>&lt;MenuItem stacked /&gt;</code> elements.",
         "displayName": "Tabs",
         "methods": [],
