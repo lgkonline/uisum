@@ -45,12 +45,7 @@ class ReactComponentPage extends React.Component {
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
-                        {this.state.selectedComponent ? <Link to="/react-component">{t("REACT_COMPONENTS")}</Link> : t("REACT_COMPONENTS")}
-                        {this.state.selectedComponent &&
-                            <span> / {this.state.selectedComponent}</span>
-                        }
-                    </HeaderTitle>
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/" />
                 </Header>
 
                 <Body containerClass="container">

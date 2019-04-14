@@ -41,9 +41,7 @@ class CustomizationsPage extends React.Component {
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
-                        {t("CUSTOMIZATIONS")}
-                    </HeaderTitle>
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/" />
                 </Header>
 
 

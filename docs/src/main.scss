@@ -41,3 +41,11 @@ $font-family-sans-serif: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe
         }
     }
 }
+
+.lgk-pill-btn.in {
+    color: rgba(black, .7);
+
+    &:hover {
+        color: black;
+    }
+}

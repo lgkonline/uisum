@@ -202,9 +202,7 @@ Utilities.startLoading();`}</Highlight>
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
-                        Utilities
-                    </HeaderTitle>
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/" />
                 </Header>
 
                 <Body containerClass="container">

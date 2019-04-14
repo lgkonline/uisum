@@ -64,9 +64,7 @@ class SearchResultsPage extends React.Component {
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
-                        {t("SEARCH2")}: "{this.state.searchWord}"
-                    </HeaderTitle>
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/" />
                 </Header>
 
                 <Body containerClass="container">

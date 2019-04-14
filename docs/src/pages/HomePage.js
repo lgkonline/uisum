@@ -7,9 +7,7 @@ class HomePage extends React.Component {
         return (
             <Page>
                 <Header>
-                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/">
-                        Start
-                    </HeaderTitle>
+                    <HeaderTitle logo={window.logo} appTitle={window.appTitle} appRootHref="/" />
                 </Header>
 
                 <Body containerClass="no-container">

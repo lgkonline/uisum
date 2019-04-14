@@ -51,7 +51,7 @@ class ReactComponent extends React.Component {
 
                 {this.props.comp.displayName == "Intro" &&
                     <p>
-                        <a href="#intro-demo">See a demo</a>
+                        <Link to="/intro-demo">See a demo</Link>
                     </p>
                 }
 
